@@ -6,17 +6,8 @@ package my.TrainerR;
 
 /**
  *
- * @author criiz
+ * @author alexa
  */
-public class Exercise {
-    String name = "";
-    String type = "";
-    
-    public void setName(String newname){
-        name = newname;
-    }
-    public void setType(String newname){
-        type = newname;
-    }
+public class CalorieBudget {
     
 }
