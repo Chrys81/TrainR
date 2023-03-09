@@ -3,17 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package my.TrainerR;
-import java.util.Map;
-import java.util.Map;
 
 /**
- *
- * @author criiz
+ * df
+ * @author criiz sike it was me sdf whole ts,jv,simesdfs sd fs dssd
  */
 public class Exercise {
     String name = "";
     String type = "";
-    Map workouts = new HashMap();
     
     public void setName(String newname){
         name = newname;
@@ -21,10 +18,5 @@ public class Exercise {
     public void setType(String newname){
         type = newname;
     }
-    
-    workouts.put("Gain Muscle",{"Push-Ups","Squats","Deadlifts","Pull-Ups"});
-    workouts.put("Lose Weight",{"Jogging Laps","Bear Crawls","Burpees","Jumping Jacks"});
-    workouts.put("Stamina",{,,,})
-    
     
 }
