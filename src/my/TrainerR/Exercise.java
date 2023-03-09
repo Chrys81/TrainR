@@ -5,8 +5,7 @@
 package my.TrainerR;
 
 /**
- *
- * @author criiz sike it was me the whole time
+@ author team7
  */
 public class Exercise {
     String name = "";

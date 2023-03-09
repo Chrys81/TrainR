@@ -6,11 +6,11 @@ package my.TrainerR;
 
 /**
  *
- * @author criiz
+ * @author criizs dfss fs s
  */
 public class Main {
     int x = 69;
     public void setX(int num){
-        x = num;
+        x = num; //f thff dsgd fd df fd
     }
 }
