@@ -5,8 +5,7 @@
 package my.TrainerR;
 
 /**
- * df
- * @author criiz sike it was me sdf whole ts,jv,simesdfs sd fs dssd
+@ author team7
  */
 public class Exercise {
     String name = "";
