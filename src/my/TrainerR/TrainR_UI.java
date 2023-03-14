@@ -6,7 +6,7 @@ package my.TrainerR;
 
 /**
  * 
- * @author criizz
+ * @author criizzversion4:17
  */
 public class TrainR_UI extends javax.swing.JFrame {
 
