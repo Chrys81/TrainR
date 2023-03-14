@@ -76,8 +76,18 @@ public class TrainR_UI extends javax.swing.JFrame {
         CardLoginPage.setPreferredSize(new java.awt.Dimension(500, 400));
 
         ButtonLogin.setText("Login");
+        ButtonLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonLoginActionPerformed(evt);
+            }
+        });
 
         ButtonNewUser.setText("New User?");
+        ButtonNewUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonNewUserActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout CardLoginPageLayout = new javax.swing.GroupLayout(CardLoginPage);
         CardLoginPage.setLayout(CardLoginPageLayout);
@@ -109,8 +119,18 @@ public class TrainR_UI extends javax.swing.JFrame {
         CardNewUserPage.setPreferredSize(new java.awt.Dimension(500, 400));
 
         ButtonCreateAccount.setText("Create Account");
+        ButtonCreateAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonCreateAccountActionPerformed(evt);
+            }
+        });
 
         ButtonBackFromNewUser.setText("Back");
+        ButtonBackFromNewUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonBackFromNewUserActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout CardNewUserPageLayout = new javax.swing.GroupLayout(CardNewUserPage);
         CardNewUserPage.setLayout(CardNewUserPageLayout);
@@ -143,8 +163,18 @@ public class TrainR_UI extends javax.swing.JFrame {
         CardStartWorkout.setPreferredSize(new java.awt.Dimension(500, 400));
 
         ButtonBackFromStartWorkout.setText("Back");
+        ButtonBackFromStartWorkout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonBackFromStartWorkoutActionPerformed(evt);
+            }
+        });
 
         ButtonStartWorkout.setText("Start Workout");
+        ButtonStartWorkout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonStartWorkoutActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout CardStartWorkoutLayout = new javax.swing.GroupLayout(CardStartWorkout);
         CardStartWorkout.setLayout(CardStartWorkoutLayout);
@@ -177,8 +207,18 @@ public class TrainR_UI extends javax.swing.JFrame {
         CardWorkout.setPreferredSize(new java.awt.Dimension(500, 400));
 
         ButtonBackFromWorkout.setText("Back");
+        ButtonBackFromWorkout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonBackFromWorkoutActionPerformed(evt);
+            }
+        });
 
         ButtonFinishWorkout.setText("Finish Workout");
+        ButtonFinishWorkout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonFinishWorkoutActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout CardWorkoutLayout = new javax.swing.GroupLayout(CardWorkout);
         CardWorkout.setLayout(CardWorkoutLayout);
@@ -219,6 +259,62 @@ public class TrainR_UI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ButtonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoginActionPerformed
+        PanelParent.removeAll();
+        PanelParent.add(CardStartWorkout);
+        PanelParent.repaint();
+        PanelParent.validate();
+    }//GEN-LAST:event_ButtonLoginActionPerformed
+
+    private void ButtonNewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonNewUserActionPerformed
+        PanelParent.removeAll();
+        PanelParent.add(CardNewUserPage);
+        PanelParent.repaint();
+        PanelParent.validate();
+    }//GEN-LAST:event_ButtonNewUserActionPerformed
+
+    private void ButtonBackFromNewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackFromNewUserActionPerformed
+        PanelParent.removeAll();
+        PanelParent.add(CardLoginPage);
+        PanelParent.repaint();
+        PanelParent.validate();
+    }//GEN-LAST:event_ButtonBackFromNewUserActionPerformed
+
+    private void ButtonCreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCreateAccountActionPerformed
+        PanelParent.removeAll();
+        PanelParent.add(CardStartWorkout);
+        PanelParent.repaint();
+        PanelParent.validate();
+    }//GEN-LAST:event_ButtonCreateAccountActionPerformed
+
+    private void ButtonBackFromStartWorkoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackFromStartWorkoutActionPerformed
+        PanelParent.removeAll();
+        PanelParent.add(CardLoginPage);
+        PanelParent.repaint();
+        PanelParent.validate();
+    }//GEN-LAST:event_ButtonBackFromStartWorkoutActionPerformed
+
+    private void ButtonBackFromWorkoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackFromWorkoutActionPerformed
+        PanelParent.removeAll();
+        PanelParent.add(CardStartWorkout);
+        PanelParent.repaint();
+        PanelParent.validate();
+    }//GEN-LAST:event_ButtonBackFromWorkoutActionPerformed
+
+    private void ButtonFinishWorkoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonFinishWorkoutActionPerformed
+        PanelParent.removeAll();
+        PanelParent.add(CardStartWorkout);
+        PanelParent.repaint();
+        PanelParent.validate();
+    }//GEN-LAST:event_ButtonFinishWorkoutActionPerformed
+
+    private void ButtonStartWorkoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonStartWorkoutActionPerformed
+        PanelParent.removeAll();
+        PanelParent.add(CardWorkout);
+        PanelParent.repaint();
+        PanelParent.validate();
+    }//GEN-LAST:event_ButtonStartWorkoutActionPerformed
 
     /**
      * @param args the command line arguments
