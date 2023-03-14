@@ -26,144 +26,199 @@ public class TrainR_UI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        TextExerciseName = new javax.swing.JTextField();
-        ButtonCreateExercise = new javax.swing.JButton();
-        LabelSummaryOutput = new javax.swing.JLabel();
-        LabelExerciseName = new javax.swing.JLabel();
-        LabelExerciseType = new javax.swing.JLabel();
-        TextExerciseType = new javax.swing.JTextField();
-        LabelSummaryHeader = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-        Button1 = new javax.swing.JButton();
+        PanelHeader = new javax.swing.JPanel();
+        LabelHeader = new javax.swing.JLabel();
+        PanelParent = new javax.swing.JPanel();
+        CardLoginPage = new javax.swing.JPanel();
+        ButtonLogin = new javax.swing.JButton();
+        ButtonNewUser = new javax.swing.JButton();
+        CardNewUserPage = new javax.swing.JPanel();
+        ButtonCreateAccount = new javax.swing.JButton();
+        ButtonBackFromNewUser = new javax.swing.JButton();
+        CardStartWorkout = new javax.swing.JPanel();
+        ButtonBackFromStartWorkout = new javax.swing.JButton();
+        ButtonStartWorkout = new javax.swing.JButton();
+        CardWorkout = new javax.swing.JPanel();
+        ButtonBackFromWorkout = new javax.swing.JButton();
+        ButtonFinishWorkout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        TextExerciseName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextExerciseNameActionPerformed(evt);
-            }
-        });
+        PanelHeader.setBackground(new java.awt.Color(204, 255, 204));
+        PanelHeader.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        ButtonCreateExercise.setText("Create");
-        ButtonCreateExercise.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonCreateExerciseActionPerformed(evt);
-            }
-        });
+        LabelHeader.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        LabelHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelHeader.setText("TrainR");
+        LabelHeader.setToolTipText("");
 
-        LabelSummaryOutput.setText("Your Exercise Will Go Here");
+        javax.swing.GroupLayout PanelHeaderLayout = new javax.swing.GroupLayout(PanelHeader);
+        PanelHeader.setLayout(PanelHeaderLayout);
+        PanelHeaderLayout.setHorizontalGroup(
+            PanelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelHeaderLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(LabelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        PanelHeaderLayout.setVerticalGroup(
+            PanelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelHeaderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(LabelHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                .addContainerGap())
+        );
 
-        LabelExerciseName.setText("Exercise Name:");
+        PanelParent.setLayout(new java.awt.CardLayout());
 
-        LabelExerciseType.setText("Exercise Type:");
+        CardLoginPage.setBackground(new java.awt.Color(153, 153, 255));
+        CardLoginPage.setBorder(javax.swing.BorderFactory.createTitledBorder("Login Page"));
+        CardLoginPage.setPreferredSize(new java.awt.Dimension(500, 400));
 
-        LabelSummaryHeader.setText("Summary:");
+        ButtonLogin.setText("Login");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        ButtonNewUser.setText("New User?");
 
-        jButton1.setText("Next Page");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        javax.swing.GroupLayout CardLoginPageLayout = new javax.swing.GroupLayout(CardLoginPage);
+        CardLoginPage.setLayout(CardLoginPageLayout);
+        CardLoginPageLayout.setHorizontalGroup(
+            CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CardLoginPageLayout.createSequentialGroup()
+                .addGap(210, 210, 210)
+                .addComponent(ButtonLogin)
+                .addContainerGap(219, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardLoginPageLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ButtonNewUser)
+                .addContainerGap())
+        );
+        CardLoginPageLayout.setVerticalGroup(
+            CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardLoginPageLayout.createSequentialGroup()
+                .addContainerGap(218, Short.MAX_VALUE)
+                .addComponent(ButtonLogin)
+                .addGap(134, 134, 134)
+                .addComponent(ButtonNewUser)
+                .addContainerGap())
+        );
 
-        Button1.setText("jButton2");
-        Button1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Button1ActionPerformed(evt);
-            }
-        });
+        PanelParent.add(CardLoginPage, "card3");
+
+        CardNewUserPage.setBackground(new java.awt.Color(255, 255, 204));
+        CardNewUserPage.setBorder(javax.swing.BorderFactory.createTitledBorder("New User Page"));
+        CardNewUserPage.setPreferredSize(new java.awt.Dimension(500, 400));
+
+        ButtonCreateAccount.setText("Create Account");
+
+        ButtonBackFromNewUser.setText("Back");
+
+        javax.swing.GroupLayout CardNewUserPageLayout = new javax.swing.GroupLayout(CardNewUserPage);
+        CardNewUserPage.setLayout(CardNewUserPageLayout);
+        CardNewUserPageLayout.setHorizontalGroup(
+            CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CardNewUserPageLayout.createSequentialGroup()
+                .addGroup(CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CardNewUserPageLayout.createSequentialGroup()
+                        .addGap(195, 195, 195)
+                        .addComponent(ButtonCreateAccount))
+                    .addGroup(CardNewUserPageLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(ButtonBackFromNewUser)))
+                .addContainerGap(195, Short.MAX_VALUE))
+        );
+        CardNewUserPageLayout.setVerticalGroup(
+            CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardNewUserPageLayout.createSequentialGroup()
+                .addContainerGap(268, Short.MAX_VALUE)
+                .addComponent(ButtonCreateAccount)
+                .addGap(84, 84, 84)
+                .addComponent(ButtonBackFromNewUser)
+                .addContainerGap())
+        );
+
+        PanelParent.add(CardNewUserPage, "card2");
+
+        CardStartWorkout.setBackground(new java.awt.Color(255, 0, 153));
+        CardStartWorkout.setBorder(javax.swing.BorderFactory.createTitledBorder("Start Workout Page"));
+        CardStartWorkout.setPreferredSize(new java.awt.Dimension(500, 400));
+
+        ButtonBackFromStartWorkout.setText("Back");
+
+        ButtonStartWorkout.setText("Start Workout");
+
+        javax.swing.GroupLayout CardStartWorkoutLayout = new javax.swing.GroupLayout(CardStartWorkout);
+        CardStartWorkout.setLayout(CardStartWorkoutLayout);
+        CardStartWorkoutLayout.setHorizontalGroup(
+            CardStartWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CardStartWorkoutLayout.createSequentialGroup()
+                .addGroup(CardStartWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CardStartWorkoutLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(ButtonBackFromStartWorkout))
+                    .addGroup(CardStartWorkoutLayout.createSequentialGroup()
+                        .addGap(199, 199, 199)
+                        .addComponent(ButtonStartWorkout)))
+                .addContainerGap(198, Short.MAX_VALUE))
+        );
+        CardStartWorkoutLayout.setVerticalGroup(
+            CardStartWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardStartWorkoutLayout.createSequentialGroup()
+                .addContainerGap(216, Short.MAX_VALUE)
+                .addComponent(ButtonStartWorkout)
+                .addGap(136, 136, 136)
+                .addComponent(ButtonBackFromStartWorkout)
+                .addContainerGap())
+        );
+
+        PanelParent.add(CardStartWorkout, "card4");
+
+        CardWorkout.setBackground(new java.awt.Color(0, 255, 255));
+        CardWorkout.setBorder(javax.swing.BorderFactory.createTitledBorder("Workout Page"));
+        CardWorkout.setPreferredSize(new java.awt.Dimension(500, 400));
+
+        ButtonBackFromWorkout.setText("Back");
+
+        ButtonFinishWorkout.setText("Finish Workout");
+
+        javax.swing.GroupLayout CardWorkoutLayout = new javax.swing.GroupLayout(CardWorkout);
+        CardWorkout.setLayout(CardWorkoutLayout);
+        CardWorkoutLayout.setHorizontalGroup(
+            CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CardWorkoutLayout.createSequentialGroup()
+                .addComponent(ButtonBackFromWorkout)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 315, Short.MAX_VALUE)
+                .addComponent(ButtonFinishWorkout)
+                .addContainerGap())
+        );
+        CardWorkoutLayout.setVerticalGroup(
+            CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardWorkoutLayout.createSequentialGroup()
+                .addContainerGap(375, Short.MAX_VALUE)
+                .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ButtonBackFromWorkout)
+                    .addComponent(ButtonFinishWorkout))
+                .addContainerGap())
+        );
+
+        PanelParent.add(CardWorkout, "card5");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(LabelSummaryOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
-                            .addComponent(LabelSummaryHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(LabelExerciseName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(LabelExerciseType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(TextExerciseName)
-                            .addComponent(ButtonCreateExercise)
-                            .addComponent(TextExerciseType, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Button1)
-                        .addGap(27, 27, 27)))
-                .addContainerGap())
+            .addComponent(PanelHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PanelParent, javax.swing.GroupLayout.DEFAULT_SIZE, 511, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(TextExerciseName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LabelExerciseName))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(LabelExerciseType)
-                            .addComponent(TextExerciseType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
-                        .addComponent(Button1)))
-                .addGap(29, 29, 29)
-                .addComponent(ButtonCreateExercise)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(LabelSummaryHeader)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LabelSummaryOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
+                .addComponent(PanelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PanelParent, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void ButtonCreateExerciseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCreateExerciseActionPerformed
-        Exercise newEx = new Exercise();
-        newEx.setName(TextExerciseName.getText());
-        newEx.setType(TextExerciseType.getText());
-        LabelSummaryOutput.setText( "Name: " + newEx.name + "\n" + "Type: " + newEx.type);
-    }//GEN-LAST:event_ButtonCreateExerciseActionPerformed
-
-    private void TextExerciseNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextExerciseNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextExerciseNameActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new NewUser_UI().setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void Button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button1ActionPerformed
-        System.out.println("Hello");
-    }//GEN-LAST:event_Button1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,16 +256,20 @@ public class TrainR_UI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Button1;
-    private javax.swing.JButton ButtonCreateExercise;
-    private javax.swing.JLabel LabelExerciseName;
-    private javax.swing.JLabel LabelExerciseType;
-    private javax.swing.JLabel LabelSummaryHeader;
-    private javax.swing.JLabel LabelSummaryOutput;
-    private javax.swing.JTextField TextExerciseName;
-    private javax.swing.JTextField TextExerciseType;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton ButtonBackFromNewUser;
+    private javax.swing.JButton ButtonBackFromStartWorkout;
+    private javax.swing.JButton ButtonBackFromWorkout;
+    private javax.swing.JButton ButtonCreateAccount;
+    private javax.swing.JButton ButtonFinishWorkout;
+    private javax.swing.JButton ButtonLogin;
+    private javax.swing.JButton ButtonNewUser;
+    private javax.swing.JButton ButtonStartWorkout;
+    private javax.swing.JPanel CardLoginPage;
+    private javax.swing.JPanel CardNewUserPage;
+    private javax.swing.JPanel CardStartWorkout;
+    private javax.swing.JPanel CardWorkout;
+    private javax.swing.JLabel LabelHeader;
+    private javax.swing.JPanel PanelHeader;
+    private javax.swing.JPanel PanelParent;
     // End of variables declaration//GEN-END:variables
 }
