@@ -32,15 +32,50 @@ public class TrainR_UI extends javax.swing.JFrame {
         CardLoginPage = new javax.swing.JPanel();
         ButtonLogin = new javax.swing.JButton();
         ButtonNewUser = new javax.swing.JButton();
+        LabelUsername = new javax.swing.JLabel();
+        LabelPassword = new javax.swing.JLabel();
+        TextUsername = new javax.swing.JTextField();
+        TextPassword = new javax.swing.JTextField();
         CardNewUserPage = new javax.swing.JPanel();
         ButtonCreateAccount = new javax.swing.JButton();
         ButtonBackFromNewUser = new javax.swing.JButton();
+        LabelNewUsername = new javax.swing.JLabel();
+        LabelNewPassword = new javax.swing.JLabel();
+        LabelNewAge = new javax.swing.JLabel();
+        LabelNewHeight = new javax.swing.JLabel();
+        LabelNewWeight = new javax.swing.JLabel();
+        LabelNewSex = new javax.swing.JLabel();
+        LabelNewGoal = new javax.swing.JLabel();
+        TextNewUsername = new javax.swing.JTextField();
+        TextNewPassword = new javax.swing.JTextField();
+        ComboNewAge = new javax.swing.JComboBox<>();
+        ComboNewHeightFt = new javax.swing.JComboBox<>();
+        LabelNewFt = new javax.swing.JLabel();
+        LabelNewIn = new javax.swing.JLabel();
+        ComboNewHeightIn = new javax.swing.JComboBox<>();
+        ComboNewWeight = new javax.swing.JComboBox<>();
+        LabelNewLbs = new javax.swing.JLabel();
+        ComboNewSex = new javax.swing.JComboBox<>();
+        ComboNewGoal = new javax.swing.JComboBox<>();
         CardStartWorkout = new javax.swing.JPanel();
         ButtonBackFromStartWorkout = new javax.swing.JButton();
         ButtonStartWorkout = new javax.swing.JButton();
+        LabelDisplayCalories = new javax.swing.JLabel();
+        LabelDisplayUsername = new javax.swing.JLabel();
+        LabelDisplayGoal = new javax.swing.JLabel();
         CardWorkout = new javax.swing.JPanel();
         ButtonBackFromWorkout = new javax.swing.JButton();
         ButtonFinishWorkout = new javax.swing.JButton();
+        CheckBox1 = new javax.swing.JCheckBox();
+        CheckBox2 = new javax.swing.JCheckBox();
+        CheckBox3 = new javax.swing.JCheckBox();
+        CheckBox4 = new javax.swing.JCheckBox();
+        CheckBox5 = new javax.swing.JCheckBox();
+        LabelExercise1 = new javax.swing.JLabel();
+        LabelExercise2 = new javax.swing.JLabel();
+        LabelExercise3 = new javax.swing.JLabel();
+        LabelExercise4 = new javax.swing.JLabel();
+        LabelExercise5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,23 +124,47 @@ public class TrainR_UI extends javax.swing.JFrame {
             }
         });
 
+        LabelUsername.setText("Username:");
+
+        LabelPassword.setText("Password:");
+
         javax.swing.GroupLayout CardLoginPageLayout = new javax.swing.GroupLayout(CardLoginPage);
         CardLoginPage.setLayout(CardLoginPageLayout);
         CardLoginPageLayout.setHorizontalGroup(
             CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CardLoginPageLayout.createSequentialGroup()
-                .addGap(210, 210, 210)
-                .addComponent(ButtonLogin)
-                .addContainerGap(219, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardLoginPageLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(ButtonNewUser)
+                .addGroup(CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardLoginPageLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ButtonNewUser))
+                    .addGroup(CardLoginPageLayout.createSequentialGroup()
+                        .addGap(210, 210, 210)
+                        .addComponent(ButtonLogin)
+                        .addGap(0, 213, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(CardLoginPageLayout.createSequentialGroup()
+                .addGap(57, 57, 57)
+                .addGroup(CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(LabelUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                    .addComponent(LabelPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addGroup(CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(TextUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
+                    .addComponent(TextPassword))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         CardLoginPageLayout.setVerticalGroup(
             CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardLoginPageLayout.createSequentialGroup()
-                .addContainerGap(218, Short.MAX_VALUE)
+                .addGap(73, 73, 73)
+                .addGroup(CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LabelUsername)
+                    .addComponent(TextUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LabelPassword)
+                    .addComponent(TextPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addComponent(ButtonLogin)
                 .addGap(134, 134, 134)
                 .addComponent(ButtonNewUser)
@@ -132,6 +191,49 @@ public class TrainR_UI extends javax.swing.JFrame {
             }
         });
 
+        LabelNewUsername.setText("Username:");
+
+        LabelNewPassword.setText("Password:");
+
+        LabelNewAge.setText("Age:");
+
+        LabelNewHeight.setText("Height:");
+
+        LabelNewWeight.setText("Weight:");
+
+        LabelNewSex.setText("Sex:");
+
+        LabelNewGoal.setText("Goal:");
+
+        TextNewUsername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextNewUsernameActionPerformed(evt);
+            }
+        });
+
+        ComboNewAge.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100" }));
+
+        ComboNewHeightFt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2", "3", "4", "5", "6", "7" }));
+        ComboNewHeightFt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboNewHeightFtActionPerformed(evt);
+            }
+        });
+
+        LabelNewFt.setText("ft.");
+
+        LabelNewIn.setText("in.");
+
+        ComboNewHeightIn.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11" }));
+
+        ComboNewWeight.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "124", "125", "126", "127", "128", "129", "130", "131", "132", "133", "134", "135", "136", "137", "138", "139", "140", "141", "142", "143", "144", "145", "146", "147", "148", "149", "150", "151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162", "163", "164", "165", "166", "167", "168", "169", "170", "171", "172", "173", "174", "175", "176", "177", "178", "179", "180", "181", "182", "183", "184", "185", "186", "187", "188", "189", "190", "191", "192", "193", "194", "195", "196", "197", "198", "199", "200", "201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "211", "212", "213", "214", "215", "216", "217", "218", "219", "220", "221", "222", "223", "224", "225", "226", "227", "228", "229", "230", "231", "232", "233", "234", "235", "236", "237", "238", "239", "240", "241", "242", "243", "244", "245", "246", "247", "248", "249", "250", "251", "252", "253", "254", "255", "256", "257", "258", "259", "260", "261", "262", "263", "264", "265", "266", "267", "268", "269", "270", "271", "272", "273", "274", "275", "276", "277", "278", "279", "280", "281", "282", "283", "284", "285", "286", "287", "288", "289", "290", "291", "292", "293", "294", "295", "296", "297", "298", "299", "300" }));
+
+        LabelNewLbs.setText("lbs.");
+
+        ComboNewSex.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Female", "Male" }));
+
+        ComboNewGoal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Build Muscle ", "Increase Endurance", "Lose Weight" }));
+
         javax.swing.GroupLayout CardNewUserPageLayout = new javax.swing.GroupLayout(CardNewUserPage);
         CardNewUserPage.setLayout(CardNewUserPageLayout);
         CardNewUserPageLayout.setHorizontalGroup(
@@ -143,17 +245,80 @@ public class TrainR_UI extends javax.swing.JFrame {
                         .addComponent(ButtonCreateAccount))
                     .addGroup(CardNewUserPageLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(ButtonBackFromNewUser)))
-                .addContainerGap(195, Short.MAX_VALUE))
+                        .addComponent(ButtonBackFromNewUser))
+                    .addGroup(CardNewUserPageLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addGroup(CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(LabelNewUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+                            .addComponent(LabelNewPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(LabelNewAge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(LabelNewHeight, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(LabelNewWeight, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(LabelNewSex, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(LabelNewGoal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(CardNewUserPageLayout.createSequentialGroup()
+                                .addComponent(ComboNewHeightFt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(LabelNewFt, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ComboNewHeightIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(LabelNewIn, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(TextNewUsername, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(TextNewPassword, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(ComboNewAge, javax.swing.GroupLayout.Alignment.LEADING, 0, 133, Short.MAX_VALUE))
+                            .addGroup(CardNewUserPageLayout.createSequentialGroup()
+                                .addGroup(CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(ComboNewGoal, javax.swing.GroupLayout.Alignment.LEADING, 0, 0, Short.MAX_VALUE)
+                                    .addComponent(ComboNewSex, javax.swing.GroupLayout.Alignment.LEADING, 0, 129, Short.MAX_VALUE)
+                                    .addComponent(ComboNewWeight, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(LabelNewLbs)))))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
         CardNewUserPageLayout.setVerticalGroup(
             CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardNewUserPageLayout.createSequentialGroup()
-                .addContainerGap(268, Short.MAX_VALUE)
+                .addContainerGap()
+                .addGroup(CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LabelNewUsername)
+                    .addComponent(TextNewUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LabelNewPassword)
+                    .addComponent(TextNewPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LabelNewAge)
+                    .addComponent(ComboNewAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LabelNewHeight)
+                    .addComponent(ComboNewHeightFt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelNewFt)
+                    .addComponent(ComboNewHeightIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelNewIn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LabelNewWeight)
+                    .addComponent(ComboNewWeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelNewLbs))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LabelNewSex)
+                    .addComponent(ComboNewSex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LabelNewGoal)
+                    .addComponent(ComboNewGoal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(ButtonCreateAccount)
-                .addGap(84, 84, 84)
+                .addGap(51, 51, 51)
                 .addComponent(ButtonBackFromNewUser)
-                .addContainerGap())
+                .addGap(39, 39, 39))
         );
 
         PanelParent.add(CardNewUserPage, "card2");
@@ -176,6 +341,16 @@ public class TrainR_UI extends javax.swing.JFrame {
             }
         });
 
+        LabelDisplayCalories.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        LabelDisplayCalories.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelDisplayCalories.setText("Calorie Budget: " + "Get from calculation");
+
+        LabelDisplayUsername.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        LabelDisplayUsername.setText("User: " + "Get from database");
+
+        LabelDisplayGoal.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        LabelDisplayGoal.setText("Goal: " + "Get from database");
+
         javax.swing.GroupLayout CardStartWorkoutLayout = new javax.swing.GroupLayout(CardStartWorkout);
         CardStartWorkout.setLayout(CardStartWorkoutLayout);
         CardStartWorkoutLayout.setHorizontalGroup(
@@ -187,13 +362,27 @@ public class TrainR_UI extends javax.swing.JFrame {
                         .addComponent(ButtonBackFromStartWorkout))
                     .addGroup(CardStartWorkoutLayout.createSequentialGroup()
                         .addGap(199, 199, 199)
-                        .addComponent(ButtonStartWorkout)))
-                .addContainerGap(198, Short.MAX_VALUE))
+                        .addComponent(ButtonStartWorkout))
+                    .addGroup(CardStartWorkoutLayout.createSequentialGroup()
+                        .addGap(97, 97, 97)
+                        .addComponent(LabelDisplayCalories, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(CardStartWorkoutLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(CardStartWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(LabelDisplayUsername, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                            .addComponent(LabelDisplayGoal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
         CardStartWorkoutLayout.setVerticalGroup(
             CardStartWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardStartWorkoutLayout.createSequentialGroup()
-                .addContainerGap(216, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(LabelDisplayUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(LabelDisplayGoal, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addComponent(LabelDisplayCalories, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(ButtonStartWorkout)
                 .addGap(136, 136, 136)
                 .addComponent(ButtonBackFromStartWorkout)
@@ -220,6 +409,28 @@ public class TrainR_UI extends javax.swing.JFrame {
             }
         });
 
+        CheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CheckBox1ActionPerformed(evt);
+            }
+        });
+
+        CheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CheckBox2ActionPerformed(evt);
+            }
+        });
+
+        LabelExercise1.setText("Push Ups (3x6)");
+
+        LabelExercise2.setText("Sit ups (3x5)");
+
+        LabelExercise3.setText("Squats (10x3)");
+
+        LabelExercise4.setText("Jogging (10 mins)");
+
+        LabelExercise5.setText("Jumping Jacks (20x5)");
+
         javax.swing.GroupLayout CardWorkoutLayout = new javax.swing.GroupLayout(CardWorkout);
         CardWorkout.setLayout(CardWorkoutLayout);
         CardWorkoutLayout.setHorizontalGroup(
@@ -229,11 +440,50 @@ public class TrainR_UI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 315, Short.MAX_VALUE)
                 .addComponent(ButtonFinishWorkout)
                 .addContainerGap())
+            .addGroup(CardWorkoutLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(LabelExercise1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(LabelExercise2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(LabelExercise3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(LabelExercise4, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE))
+                    .addComponent(LabelExercise5, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(CheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CheckBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CheckBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CheckBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CheckBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         CardWorkoutLayout.setVerticalGroup(
             CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardWorkoutLayout.createSequentialGroup()
-                .addContainerGap(375, Short.MAX_VALUE)
+                .addGap(49, 49, 49)
+                .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(CardWorkoutLayout.createSequentialGroup()
+                        .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(CardWorkoutLayout.createSequentialGroup()
+                                .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(CheckBox1)
+                                    .addComponent(LabelExercise1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(LabelExercise2, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(CheckBox2, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(CheckBox3))
+                            .addComponent(LabelExercise3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CheckBox4))
+                    .addComponent(LabelExercise4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(CheckBox5)
+                    .addComponent(LabelExercise5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
                 .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ButtonBackFromWorkout)
                     .addComponent(ButtonFinishWorkout))
@@ -316,6 +566,22 @@ public class TrainR_UI extends javax.swing.JFrame {
         PanelParent.validate();
     }//GEN-LAST:event_ButtonStartWorkoutActionPerformed
 
+    private void TextNewUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextNewUsernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextNewUsernameActionPerformed
+
+    private void ComboNewHeightFtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboNewHeightFtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComboNewHeightFtActionPerformed
+
+    private void CheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CheckBox1ActionPerformed
+
+    private void CheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CheckBox2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -364,8 +630,43 @@ public class TrainR_UI extends javax.swing.JFrame {
     private javax.swing.JPanel CardNewUserPage;
     private javax.swing.JPanel CardStartWorkout;
     private javax.swing.JPanel CardWorkout;
+    private javax.swing.JCheckBox CheckBox1;
+    private javax.swing.JCheckBox CheckBox2;
+    private javax.swing.JCheckBox CheckBox3;
+    private javax.swing.JCheckBox CheckBox4;
+    private javax.swing.JCheckBox CheckBox5;
+    private javax.swing.JComboBox<String> ComboNewAge;
+    private javax.swing.JComboBox<String> ComboNewGoal;
+    private javax.swing.JComboBox<String> ComboNewHeightFt;
+    private javax.swing.JComboBox<String> ComboNewHeightIn;
+    private javax.swing.JComboBox<String> ComboNewSex;
+    private javax.swing.JComboBox<String> ComboNewWeight;
+    private javax.swing.JLabel LabelDisplayCalories;
+    private javax.swing.JLabel LabelDisplayGoal;
+    private javax.swing.JLabel LabelDisplayUsername;
+    private javax.swing.JLabel LabelExercise1;
+    private javax.swing.JLabel LabelExercise2;
+    private javax.swing.JLabel LabelExercise3;
+    private javax.swing.JLabel LabelExercise4;
+    private javax.swing.JLabel LabelExercise5;
     private javax.swing.JLabel LabelHeader;
+    private javax.swing.JLabel LabelNewAge;
+    private javax.swing.JLabel LabelNewFt;
+    private javax.swing.JLabel LabelNewGoal;
+    private javax.swing.JLabel LabelNewHeight;
+    private javax.swing.JLabel LabelNewIn;
+    private javax.swing.JLabel LabelNewLbs;
+    private javax.swing.JLabel LabelNewPassword;
+    private javax.swing.JLabel LabelNewSex;
+    private javax.swing.JLabel LabelNewUsername;
+    private javax.swing.JLabel LabelNewWeight;
+    private javax.swing.JLabel LabelPassword;
+    private javax.swing.JLabel LabelUsername;
     private javax.swing.JPanel PanelHeader;
     private javax.swing.JPanel PanelParent;
+    private javax.swing.JTextField TextNewPassword;
+    private javax.swing.JTextField TextNewUsername;
+    private javax.swing.JTextField TextPassword;
+    private javax.swing.JTextField TextUsername;
     // End of variables declaration//GEN-END:variables
 }

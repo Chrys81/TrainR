@@ -110,22 +110,49 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="210" max="-2" attributes="0"/>
-                      <Component id="ButtonLogin" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="219" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="ButtonNewUser" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="ButtonNewUser" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="210" max="-2" attributes="0"/>
+                              <Component id="ButtonLogin" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="213" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="LabelUsername" pref="97" max="32767" attributes="0"/>
+                          <Component id="LabelPassword" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="TextUsername" pref="246" max="32767" attributes="0"/>
+                          <Component id="TextPassword" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="218" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="LabelUsername" min="-2" max="-2" attributes="0"/>
+                          <Component id="TextUsername" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="LabelPassword" min="-2" max="-2" attributes="0"/>
+                          <Component id="TextPassword" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="67" max="32767" attributes="0"/>
                       <Component id="ButtonLogin" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
                       <Component id="ButtonNewUser" min="-2" max="-2" attributes="0"/>
@@ -150,6 +177,20 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonNewUserActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelUsername">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Username:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelPassword">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Password:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="TextUsername">
+            </Component>
+            <Component class="javax.swing.JTextField" name="TextPassword">
             </Component>
           </SubComponents>
         </Container>
@@ -186,19 +227,96 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="ButtonBackFromNewUser" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="LabelNewUsername" pref="83" max="32767" attributes="0"/>
+                                  <Component id="LabelNewPassword" max="32767" attributes="0"/>
+                                  <Component id="LabelNewAge" max="32767" attributes="0"/>
+                                  <Component id="LabelNewHeight" max="32767" attributes="0"/>
+                                  <Component id="LabelNewWeight" max="32767" attributes="0"/>
+                                  <Component id="LabelNewSex" max="32767" attributes="0"/>
+                                  <Component id="LabelNewGoal" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="ComboNewHeightFt" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="LabelNewFt" min="-2" pref="19" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="ComboNewHeightIn" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="LabelNewIn" min="-2" pref="19" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="TextNewUsername" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="TextNewPassword" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="ComboNewAge" alignment="0" pref="133" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="ComboNewGoal" alignment="0" pref="0" max="32767" attributes="0"/>
+                                          <Component id="ComboNewSex" alignment="0" pref="129" max="32767" attributes="0"/>
+                                          <Component id="ComboNewWeight" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="LabelNewLbs" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="195" max="32767" attributes="0"/>
+                      <EmptySpace pref="186" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="268" max="32767" attributes="0"/>
-                      <Component id="ButtonCreateAccount" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                      <Component id="ButtonBackFromNewUser" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="LabelNewUsername" min="-2" max="-2" attributes="0"/>
+                          <Component id="TextNewUsername" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="LabelNewPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TextNewPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="LabelNewAge" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ComboNewAge" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="LabelNewHeight" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ComboNewHeightFt" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelNewFt" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ComboNewHeightIn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelNewIn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="LabelNewWeight" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ComboNewWeight" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelNewLbs" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="LabelNewSex" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ComboNewSex" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="LabelNewGoal" min="-2" max="-2" attributes="0"/>
+                          <Component id="ComboNewGoal" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="36" max="32767" attributes="0"/>
+                      <Component id="ButtonCreateAccount" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                      <Component id="ButtonBackFromNewUser" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -219,6 +337,458 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonBackFromNewUserActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelNewUsername">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Username:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelNewPassword">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Password:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelNewAge">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Age:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelNewHeight">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Height:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelNewWeight">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Weight:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelNewSex">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sex:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelNewGoal">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Goal:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="TextNewUsername">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextNewUsernameActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="TextNewPassword">
+            </Component>
+            <Component class="javax.swing.JComboBox" name="ComboNewAge">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="93">
+                    <StringItem index="0" value="8"/>
+                    <StringItem index="1" value="9"/>
+                    <StringItem index="2" value="10"/>
+                    <StringItem index="3" value="11"/>
+                    <StringItem index="4" value="12"/>
+                    <StringItem index="5" value="13"/>
+                    <StringItem index="6" value="14"/>
+                    <StringItem index="7" value="15"/>
+                    <StringItem index="8" value="16"/>
+                    <StringItem index="9" value="17"/>
+                    <StringItem index="10" value="18"/>
+                    <StringItem index="11" value="19"/>
+                    <StringItem index="12" value="20"/>
+                    <StringItem index="13" value="21"/>
+                    <StringItem index="14" value="22"/>
+                    <StringItem index="15" value="23"/>
+                    <StringItem index="16" value="24"/>
+                    <StringItem index="17" value="25"/>
+                    <StringItem index="18" value="26"/>
+                    <StringItem index="19" value="27"/>
+                    <StringItem index="20" value="28"/>
+                    <StringItem index="21" value="29"/>
+                    <StringItem index="22" value="30"/>
+                    <StringItem index="23" value="31"/>
+                    <StringItem index="24" value="32"/>
+                    <StringItem index="25" value="33"/>
+                    <StringItem index="26" value="34"/>
+                    <StringItem index="27" value="35"/>
+                    <StringItem index="28" value="36"/>
+                    <StringItem index="29" value="37"/>
+                    <StringItem index="30" value="38"/>
+                    <StringItem index="31" value="39"/>
+                    <StringItem index="32" value="40"/>
+                    <StringItem index="33" value="41"/>
+                    <StringItem index="34" value="42"/>
+                    <StringItem index="35" value="43"/>
+                    <StringItem index="36" value="44"/>
+                    <StringItem index="37" value="45"/>
+                    <StringItem index="38" value="46"/>
+                    <StringItem index="39" value="47"/>
+                    <StringItem index="40" value="48"/>
+                    <StringItem index="41" value="49"/>
+                    <StringItem index="42" value="50"/>
+                    <StringItem index="43" value="51"/>
+                    <StringItem index="44" value="52"/>
+                    <StringItem index="45" value="53"/>
+                    <StringItem index="46" value="54"/>
+                    <StringItem index="47" value="55"/>
+                    <StringItem index="48" value="56"/>
+                    <StringItem index="49" value="57"/>
+                    <StringItem index="50" value="58"/>
+                    <StringItem index="51" value="59"/>
+                    <StringItem index="52" value="60"/>
+                    <StringItem index="53" value="61"/>
+                    <StringItem index="54" value="62"/>
+                    <StringItem index="55" value="63"/>
+                    <StringItem index="56" value="64"/>
+                    <StringItem index="57" value="65"/>
+                    <StringItem index="58" value="66"/>
+                    <StringItem index="59" value="67"/>
+                    <StringItem index="60" value="68"/>
+                    <StringItem index="61" value="69"/>
+                    <StringItem index="62" value="70"/>
+                    <StringItem index="63" value="71"/>
+                    <StringItem index="64" value="72"/>
+                    <StringItem index="65" value="73"/>
+                    <StringItem index="66" value="74"/>
+                    <StringItem index="67" value="75"/>
+                    <StringItem index="68" value="76"/>
+                    <StringItem index="69" value="77"/>
+                    <StringItem index="70" value="78"/>
+                    <StringItem index="71" value="79"/>
+                    <StringItem index="72" value="80"/>
+                    <StringItem index="73" value="81"/>
+                    <StringItem index="74" value="82"/>
+                    <StringItem index="75" value="83"/>
+                    <StringItem index="76" value="84"/>
+                    <StringItem index="77" value="85"/>
+                    <StringItem index="78" value="86"/>
+                    <StringItem index="79" value="87"/>
+                    <StringItem index="80" value="88"/>
+                    <StringItem index="81" value="89"/>
+                    <StringItem index="82" value="90"/>
+                    <StringItem index="83" value="91"/>
+                    <StringItem index="84" value="92"/>
+                    <StringItem index="85" value="93"/>
+                    <StringItem index="86" value="94"/>
+                    <StringItem index="87" value="95"/>
+                    <StringItem index="88" value="96"/>
+                    <StringItem index="89" value="97"/>
+                    <StringItem index="90" value="98"/>
+                    <StringItem index="91" value="99"/>
+                    <StringItem index="92" value="100"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="ComboNewHeightFt">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="6">
+                    <StringItem index="0" value="2"/>
+                    <StringItem index="1" value="3"/>
+                    <StringItem index="2" value="4"/>
+                    <StringItem index="3" value="5"/>
+                    <StringItem index="4" value="6"/>
+                    <StringItem index="5" value="7"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ComboNewHeightFtActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelNewFt">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="ft."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelNewIn">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="in."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="ComboNewHeightIn">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="11">
+                    <StringItem index="0" value="1"/>
+                    <StringItem index="1" value="2"/>
+                    <StringItem index="2" value="3"/>
+                    <StringItem index="3" value="4"/>
+                    <StringItem index="4" value="5"/>
+                    <StringItem index="5" value="6"/>
+                    <StringItem index="6" value="7"/>
+                    <StringItem index="7" value="8"/>
+                    <StringItem index="8" value="9"/>
+                    <StringItem index="9" value="10"/>
+                    <StringItem index="10" value="11"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="ComboNewWeight">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="211">
+                    <StringItem index="0" value="90"/>
+                    <StringItem index="1" value="91"/>
+                    <StringItem index="2" value="92"/>
+                    <StringItem index="3" value="93"/>
+                    <StringItem index="4" value="94"/>
+                    <StringItem index="5" value="95"/>
+                    <StringItem index="6" value="96"/>
+                    <StringItem index="7" value="97"/>
+                    <StringItem index="8" value="98"/>
+                    <StringItem index="9" value="99"/>
+                    <StringItem index="10" value="100"/>
+                    <StringItem index="11" value="101"/>
+                    <StringItem index="12" value="102"/>
+                    <StringItem index="13" value="103"/>
+                    <StringItem index="14" value="104"/>
+                    <StringItem index="15" value="105"/>
+                    <StringItem index="16" value="106"/>
+                    <StringItem index="17" value="107"/>
+                    <StringItem index="18" value="108"/>
+                    <StringItem index="19" value="109"/>
+                    <StringItem index="20" value="110"/>
+                    <StringItem index="21" value="111"/>
+                    <StringItem index="22" value="112"/>
+                    <StringItem index="23" value="113"/>
+                    <StringItem index="24" value="114"/>
+                    <StringItem index="25" value="115"/>
+                    <StringItem index="26" value="116"/>
+                    <StringItem index="27" value="117"/>
+                    <StringItem index="28" value="118"/>
+                    <StringItem index="29" value="119"/>
+                    <StringItem index="30" value="120"/>
+                    <StringItem index="31" value="121"/>
+                    <StringItem index="32" value="122"/>
+                    <StringItem index="33" value="123"/>
+                    <StringItem index="34" value="124"/>
+                    <StringItem index="35" value="125"/>
+                    <StringItem index="36" value="126"/>
+                    <StringItem index="37" value="127"/>
+                    <StringItem index="38" value="128"/>
+                    <StringItem index="39" value="129"/>
+                    <StringItem index="40" value="130"/>
+                    <StringItem index="41" value="131"/>
+                    <StringItem index="42" value="132"/>
+                    <StringItem index="43" value="133"/>
+                    <StringItem index="44" value="134"/>
+                    <StringItem index="45" value="135"/>
+                    <StringItem index="46" value="136"/>
+                    <StringItem index="47" value="137"/>
+                    <StringItem index="48" value="138"/>
+                    <StringItem index="49" value="139"/>
+                    <StringItem index="50" value="140"/>
+                    <StringItem index="51" value="141"/>
+                    <StringItem index="52" value="142"/>
+                    <StringItem index="53" value="143"/>
+                    <StringItem index="54" value="144"/>
+                    <StringItem index="55" value="145"/>
+                    <StringItem index="56" value="146"/>
+                    <StringItem index="57" value="147"/>
+                    <StringItem index="58" value="148"/>
+                    <StringItem index="59" value="149"/>
+                    <StringItem index="60" value="150"/>
+                    <StringItem index="61" value="151"/>
+                    <StringItem index="62" value="152"/>
+                    <StringItem index="63" value="153"/>
+                    <StringItem index="64" value="154"/>
+                    <StringItem index="65" value="155"/>
+                    <StringItem index="66" value="156"/>
+                    <StringItem index="67" value="157"/>
+                    <StringItem index="68" value="158"/>
+                    <StringItem index="69" value="159"/>
+                    <StringItem index="70" value="160"/>
+                    <StringItem index="71" value="161"/>
+                    <StringItem index="72" value="162"/>
+                    <StringItem index="73" value="163"/>
+                    <StringItem index="74" value="164"/>
+                    <StringItem index="75" value="165"/>
+                    <StringItem index="76" value="166"/>
+                    <StringItem index="77" value="167"/>
+                    <StringItem index="78" value="168"/>
+                    <StringItem index="79" value="169"/>
+                    <StringItem index="80" value="170"/>
+                    <StringItem index="81" value="171"/>
+                    <StringItem index="82" value="172"/>
+                    <StringItem index="83" value="173"/>
+                    <StringItem index="84" value="174"/>
+                    <StringItem index="85" value="175"/>
+                    <StringItem index="86" value="176"/>
+                    <StringItem index="87" value="177"/>
+                    <StringItem index="88" value="178"/>
+                    <StringItem index="89" value="179"/>
+                    <StringItem index="90" value="180"/>
+                    <StringItem index="91" value="181"/>
+                    <StringItem index="92" value="182"/>
+                    <StringItem index="93" value="183"/>
+                    <StringItem index="94" value="184"/>
+                    <StringItem index="95" value="185"/>
+                    <StringItem index="96" value="186"/>
+                    <StringItem index="97" value="187"/>
+                    <StringItem index="98" value="188"/>
+                    <StringItem index="99" value="189"/>
+                    <StringItem index="100" value="190"/>
+                    <StringItem index="101" value="191"/>
+                    <StringItem index="102" value="192"/>
+                    <StringItem index="103" value="193"/>
+                    <StringItem index="104" value="194"/>
+                    <StringItem index="105" value="195"/>
+                    <StringItem index="106" value="196"/>
+                    <StringItem index="107" value="197"/>
+                    <StringItem index="108" value="198"/>
+                    <StringItem index="109" value="199"/>
+                    <StringItem index="110" value="200"/>
+                    <StringItem index="111" value="201"/>
+                    <StringItem index="112" value="202"/>
+                    <StringItem index="113" value="203"/>
+                    <StringItem index="114" value="204"/>
+                    <StringItem index="115" value="205"/>
+                    <StringItem index="116" value="206"/>
+                    <StringItem index="117" value="207"/>
+                    <StringItem index="118" value="208"/>
+                    <StringItem index="119" value="209"/>
+                    <StringItem index="120" value="210"/>
+                    <StringItem index="121" value="211"/>
+                    <StringItem index="122" value="212"/>
+                    <StringItem index="123" value="213"/>
+                    <StringItem index="124" value="214"/>
+                    <StringItem index="125" value="215"/>
+                    <StringItem index="126" value="216"/>
+                    <StringItem index="127" value="217"/>
+                    <StringItem index="128" value="218"/>
+                    <StringItem index="129" value="219"/>
+                    <StringItem index="130" value="220"/>
+                    <StringItem index="131" value="221"/>
+                    <StringItem index="132" value="222"/>
+                    <StringItem index="133" value="223"/>
+                    <StringItem index="134" value="224"/>
+                    <StringItem index="135" value="225"/>
+                    <StringItem index="136" value="226"/>
+                    <StringItem index="137" value="227"/>
+                    <StringItem index="138" value="228"/>
+                    <StringItem index="139" value="229"/>
+                    <StringItem index="140" value="230"/>
+                    <StringItem index="141" value="231"/>
+                    <StringItem index="142" value="232"/>
+                    <StringItem index="143" value="233"/>
+                    <StringItem index="144" value="234"/>
+                    <StringItem index="145" value="235"/>
+                    <StringItem index="146" value="236"/>
+                    <StringItem index="147" value="237"/>
+                    <StringItem index="148" value="238"/>
+                    <StringItem index="149" value="239"/>
+                    <StringItem index="150" value="240"/>
+                    <StringItem index="151" value="241"/>
+                    <StringItem index="152" value="242"/>
+                    <StringItem index="153" value="243"/>
+                    <StringItem index="154" value="244"/>
+                    <StringItem index="155" value="245"/>
+                    <StringItem index="156" value="246"/>
+                    <StringItem index="157" value="247"/>
+                    <StringItem index="158" value="248"/>
+                    <StringItem index="159" value="249"/>
+                    <StringItem index="160" value="250"/>
+                    <StringItem index="161" value="251"/>
+                    <StringItem index="162" value="252"/>
+                    <StringItem index="163" value="253"/>
+                    <StringItem index="164" value="254"/>
+                    <StringItem index="165" value="255"/>
+                    <StringItem index="166" value="256"/>
+                    <StringItem index="167" value="257"/>
+                    <StringItem index="168" value="258"/>
+                    <StringItem index="169" value="259"/>
+                    <StringItem index="170" value="260"/>
+                    <StringItem index="171" value="261"/>
+                    <StringItem index="172" value="262"/>
+                    <StringItem index="173" value="263"/>
+                    <StringItem index="174" value="264"/>
+                    <StringItem index="175" value="265"/>
+                    <StringItem index="176" value="266"/>
+                    <StringItem index="177" value="267"/>
+                    <StringItem index="178" value="268"/>
+                    <StringItem index="179" value="269"/>
+                    <StringItem index="180" value="270"/>
+                    <StringItem index="181" value="271"/>
+                    <StringItem index="182" value="272"/>
+                    <StringItem index="183" value="273"/>
+                    <StringItem index="184" value="274"/>
+                    <StringItem index="185" value="275"/>
+                    <StringItem index="186" value="276"/>
+                    <StringItem index="187" value="277"/>
+                    <StringItem index="188" value="278"/>
+                    <StringItem index="189" value="279"/>
+                    <StringItem index="190" value="280"/>
+                    <StringItem index="191" value="281"/>
+                    <StringItem index="192" value="282"/>
+                    <StringItem index="193" value="283"/>
+                    <StringItem index="194" value="284"/>
+                    <StringItem index="195" value="285"/>
+                    <StringItem index="196" value="286"/>
+                    <StringItem index="197" value="287"/>
+                    <StringItem index="198" value="288"/>
+                    <StringItem index="199" value="289"/>
+                    <StringItem index="200" value="290"/>
+                    <StringItem index="201" value="291"/>
+                    <StringItem index="202" value="292"/>
+                    <StringItem index="203" value="293"/>
+                    <StringItem index="204" value="294"/>
+                    <StringItem index="205" value="295"/>
+                    <StringItem index="206" value="296"/>
+                    <StringItem index="207" value="297"/>
+                    <StringItem index="208" value="298"/>
+                    <StringItem index="209" value="299"/>
+                    <StringItem index="210" value="300"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelNewLbs">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="lbs."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="ComboNewSex">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="2">
+                    <StringItem index="0" value="Female"/>
+                    <StringItem index="1" value="Male"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="ComboNewGoal">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="3">
+                    <StringItem index="0" value="Build Muscle "/>
+                    <StringItem index="1" value="Increase Endurance"/>
+                    <StringItem index="2" value="Lose Weight"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
@@ -255,15 +825,32 @@
                               <EmptySpace min="-2" pref="199" max="-2" attributes="0"/>
                               <Component id="ButtonStartWorkout" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                              <Component id="LabelDisplayCalories" min="-2" pref="296" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="LabelDisplayUsername" alignment="0" pref="128" max="32767" attributes="0"/>
+                                  <Component id="LabelDisplayGoal" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="198" max="32767" attributes="0"/>
+                      <EmptySpace pref="108" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="216" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="LabelDisplayUsername" min="-2" pref="26" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="LabelDisplayGoal" min="-2" pref="26" max="-2" attributes="0"/>
+                      <EmptySpace pref="79" max="32767" attributes="0"/>
+                      <Component id="LabelDisplayCalories" min="-2" pref="43" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="ButtonStartWorkout" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
                       <Component id="ButtonBackFromStartWorkout" min="-2" max="-2" attributes="0"/>
@@ -288,6 +875,37 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonStartWorkoutActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelDisplayCalories">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="14" style="1"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;Calorie Budget: &quot; + &quot;Get from calculation&quot;" type="code"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelDisplayUsername">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;User: &quot; + &quot;Get from database&quot;" type="code"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelDisplayGoal">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;Goal: &quot; + &quot;Get from database&quot;" type="code"/>
+                </Property>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -320,12 +938,62 @@
                       <Component id="ButtonFinishWorkout" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="LabelExercise1" max="32767" attributes="0"/>
+                              <Component id="LabelExercise2" max="32767" attributes="0"/>
+                              <Component id="LabelExercise3" max="32767" attributes="0"/>
+                              <Component id="LabelExercise4" pref="177" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="LabelExercise5" min="-2" pref="181" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="CheckBox1" min="-2" pref="85" max="-2" attributes="0"/>
+                          <Component id="CheckBox2" min="-2" pref="85" max="-2" attributes="0"/>
+                          <Component id="CheckBox3" min="-2" pref="85" max="-2" attributes="0"/>
+                          <Component id="CheckBox4" min="-2" pref="85" max="-2" attributes="0"/>
+                          <Component id="CheckBox5" min="-2" pref="85" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="375" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="CheckBox1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="LabelExercise1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="LabelExercise2" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="CheckBox2" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="CheckBox3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="LabelExercise3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="CheckBox4" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="LabelExercise4" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="CheckBox5" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelExercise5" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="207" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="ButtonBackFromWorkout" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="ButtonFinishWorkout" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -351,6 +1019,47 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonFinishWorkoutActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="CheckBox1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CheckBox1ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="CheckBox2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CheckBox2ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="CheckBox3">
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="CheckBox4">
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="CheckBox5">
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelExercise1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Push Ups (3x6)"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelExercise2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sit ups (3x5)"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelExercise3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Squats (10x3)"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelExercise4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Jogging (10 mins)"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="LabelExercise5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Jumping Jacks (20x5)"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
