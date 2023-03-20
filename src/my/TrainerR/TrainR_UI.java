@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package my.TrainerR;
-
 /**
  * 
  * @author criizzversion4:25
@@ -13,8 +12,13 @@ public class TrainR_UI extends javax.swing.JFrame {
     /**
      * Creates new form TrainR_UI
      */
+    UserProfile user1;
+    CalorieBudget userBudget;
+    
     public TrainR_UI() {
         initComponents();
+        user1 = new UserProfile();
+        userBudget = new CalorieBudget();
     }
 
     /**
@@ -346,7 +350,7 @@ public class TrainR_UI extends javax.swing.JFrame {
         LabelDisplayCalories.setText("Calorie Budget: " + "Get from calculation");
 
         LabelDisplayUsername.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        LabelDisplayUsername.setText("User: " + "Get from database");
+        LabelDisplayUsername.setText("Test");
 
         LabelDisplayGoal.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         LabelDisplayGoal.setText("Goal: " + "Get from database");
@@ -418,6 +422,24 @@ public class TrainR_UI extends javax.swing.JFrame {
         CheckBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CheckBox2ActionPerformed(evt);
+            }
+        });
+
+        CheckBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CheckBox3ActionPerformed(evt);
+            }
+        });
+
+        CheckBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CheckBox4ActionPerformed(evt);
+            }
+        });
+
+        CheckBox5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CheckBox5ActionPerformed(evt);
             }
         });
 
@@ -532,8 +554,30 @@ public class TrainR_UI extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonBackFromNewUserActionPerformed
 
     private void ButtonCreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCreateAccountActionPerformed
+        // when create account is selected, variables are assigned based on values in text boxes
+        user1.setUser(TextNewUsername.getText());
+        user1.setPassword(TextNewPassword.getText());
+        user1.setAge(ComboNewAge.getSelectedItem().toString());
+        
+        String heightft = ComboNewHeightFt.getSelectedItem().toString();
+        String heightin = ComboNewHeightIn.getSelectedItem().toString();
+        int height = Integer.parseInt(heightft)*12 + Integer.parseInt(heightin);
+        user1.setHeight(height);
+        
+        user1.setWeight(ComboNewWeight.getSelectedItem().toString());
+        
+        user1.setSex(ComboNewSex.getSelectedItem().toString());
+        
+        user1.setGoal(ComboNewGoal.getSelectedItem().toString());
+        
+        // calculate calorie budget
+        userBudget.getMaintenance(user1.getAge(), user1.getWeight(), user1.getHeight(), user1.getSex());
+        
         PanelParent.removeAll();
         PanelParent.add(CardStartWorkout);
+        LabelDisplayUsername.setText("User: " + user1.getUser());
+        LabelDisplayGoal.setText("Goal: " +user1.getGoal());
+        LabelDisplayCalories.setText("Daily Calorie Budget: " + String.valueOf(Math.round(userBudget.getBudget())));
         PanelParent.repaint();
         PanelParent.validate();
     }//GEN-LAST:event_ButtonCreateAccountActionPerformed
@@ -553,8 +597,35 @@ public class TrainR_UI extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonBackFromWorkoutActionPerformed
 
     private void ButtonFinishWorkoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonFinishWorkoutActionPerformed
+        // if a checkbox for an exercise is selected, add calories burned for that exercise
+        // temporarily set to 100, rework with rework of exercise/workout class
+        if(CheckBox1.isSelected()) {
+            userBudget.addWorkout(100);
+        }
+        if(CheckBox2.isSelected()) {
+            userBudget.addWorkout(100);
+        }
+        if(CheckBox3.isSelected()) {
+            userBudget.addWorkout(100);
+        }
+        if(CheckBox4.isSelected()) {
+            userBudget.addWorkout(100);
+        }
+        if(CheckBox5.isSelected()) {
+            userBudget.addWorkout(100);
+        }
+        
+        // reset checkboxes before moving to next screen
+        CheckBox1.setSelected(false);
+        CheckBox2.setSelected(false);
+        CheckBox3.setSelected(false);
+        CheckBox4.setSelected(false);
+        CheckBox5.setSelected(false);
+        
         PanelParent.removeAll();
         PanelParent.add(CardStartWorkout);
+        // recalculate value to display
+        LabelDisplayCalories.setText("Daily Calorie Budget: " + String.valueOf(Math.round(userBudget.getBudget())));
         PanelParent.repaint();
         PanelParent.validate();
     }//GEN-LAST:event_ButtonFinishWorkoutActionPerformed
@@ -567,7 +638,7 @@ public class TrainR_UI extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonStartWorkoutActionPerformed
 
     private void TextNewUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextNewUsernameActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_TextNewUsernameActionPerformed
 
     private void ComboNewHeightFtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboNewHeightFtActionPerformed
@@ -581,6 +652,18 @@ public class TrainR_UI extends javax.swing.JFrame {
     private void CheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBox2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CheckBox2ActionPerformed
+
+    private void CheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CheckBox3ActionPerformed
+
+    private void CheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBox4ActionPerformed
+        userBudget.addWorkout(100);
+    }//GEN-LAST:event_CheckBox4ActionPerformed
+
+    private void CheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBox5ActionPerformed
+        
+    }//GEN-LAST:event_CheckBox5ActionPerformed
 
     /**
      * @param args the command line arguments

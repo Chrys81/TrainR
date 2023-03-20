@@ -17,18 +17,22 @@ public class CalorieBudget {
     double cMaintain;
     double cBudget;
     
+    public CalorieBudget() {
+        this.cMaintain = 0;
+        this.cBudget = 0;
+    }
     public void getMaintenance(int age, int weight, int height, String sex)
     {
-        if (sex.equals("male"))
+        if (sex.equals("Male"))
         {
             cMaintain = 66.47 + (6.24 * weight) + (12.7 * height) - (6.75 * age);
         }
-        else if (sex.equals("female"))
+        else if (sex.equals("Female"))
         {
             cMaintain = 65.51 + (4.35 * weight) + (4.7 * height) - (4.7 * age);
         }
         
-        cBudget += cMaintain;
+        cBudget = cMaintain;
     }
     
     public double addWorkout(double cWorkout)
