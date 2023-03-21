@@ -2,6 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 package my.TrainerR;
 
 /**
@@ -83,6 +86,18 @@ public class UserProfile {
 
     public void setGoal(String goal) {
         this.goal = goal;
+    }
+    
+    public void saveProfile() { // function that saves the table to a file
+        String fileName = "user_profiles.txt";
+        String lineSeparator = System.getProperty("line.separator"); 
+
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName, true))) {
+            bw.write(user + "," + password + "," + age + "," + height + "," + weight + "," + sex + "," + goal); //writes fields to file with commas sepreating them
+            bw.write(lineSeparator); // starts new line
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 
