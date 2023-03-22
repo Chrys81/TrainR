@@ -5,7 +5,9 @@
 package my.TrainerR;
 
 /**
- *
+ * Class for handling calorie budget of users.
+ * Contains methods for calculating maintenance budget, and adding calories
+ * burned from workouts.
  * @author alexa
  */
 public class CalorieBudget {

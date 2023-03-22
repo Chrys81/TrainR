@@ -3,8 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package my.TrainerR;
+import my.TrainerR.UserProfile;
 /**
- * 
+ * GUI class, containing all of the screens for the user to use the application.
+ * Also contains code for filling out user information.
  * @author criizzversion4:25
  */
 public class TrainR_UI extends javax.swing.JFrame {
@@ -17,7 +19,8 @@ public class TrainR_UI extends javax.swing.JFrame {
     
     public TrainR_UI() {
         initComponents();
-        user1 = new UserProfile();
+        // create objects for use
+        user1 = new UserProfile(); 
         userBudget = new CalorieBudget();
     }
 
@@ -533,6 +536,7 @@ public class TrainR_UI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoginActionPerformed
+        // login button. Check for existing user has not been implemented yet.
         PanelParent.removeAll();
         PanelParent.add(CardStartWorkout);
         PanelParent.repaint();
@@ -540,6 +544,7 @@ public class TrainR_UI extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonLoginActionPerformed
 
     private void ButtonNewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonNewUserActionPerformed
+        // sends user to input new user information form
         PanelParent.removeAll();
         PanelParent.add(CardNewUserPage);
         PanelParent.repaint();
@@ -547,6 +552,7 @@ public class TrainR_UI extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonNewUserActionPerformed
 
     private void ButtonBackFromNewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackFromNewUserActionPerformed
+        // return to login screen
         PanelParent.removeAll();
         PanelParent.add(CardLoginPage);
         PanelParent.repaint();
@@ -572,6 +578,8 @@ public class TrainR_UI extends javax.swing.JFrame {
         
         // calculate calorie budget
         userBudget.getMaintenance(user1.getAge(), user1.getWeight(), user1.getHeight(), user1.getSex());
+        
+        user1.saveProfile();
         
         PanelParent.removeAll();
         PanelParent.add(CardStartWorkout);

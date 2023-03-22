@@ -5,7 +5,8 @@
 package my.TrainerR;
 
 /**
- *
+ * Class for workouts, will be expanded on to provide lists to display on the 
+ * workout page based on user goal.
  * @author aidan
  */
 

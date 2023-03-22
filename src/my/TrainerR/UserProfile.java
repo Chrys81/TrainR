@@ -1,3 +1,5 @@
+package my.TrainerR;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -5,10 +7,10 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-package my.TrainerR;
 
 /**
- *
+ * Class for creating a user profile. Contains methods to set and get all
+ * relevant traits, as well as a method to add  it to a file for future access.
  * @author NX1
  */
 public class UserProfile {

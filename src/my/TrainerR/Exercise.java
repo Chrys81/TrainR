@@ -5,7 +5,8 @@
 package my.TrainerR;
 
 /**
- *
+ * Class for exercises. Will be expanded on and work closely with the
+ * workout class to provide custom workouts based on user goals.
  * @author criiz
  */
 public class Exercise {
