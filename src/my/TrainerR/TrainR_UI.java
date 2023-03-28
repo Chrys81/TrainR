@@ -16,12 +16,14 @@ public class TrainR_UI extends javax.swing.JFrame {
      */
     UserProfile user1;
     CalorieBudget userBudget;
+    Goal g;
     
     public TrainR_UI() {
         initComponents();
         // create objects for use
         user1 = new UserProfile(); 
         userBudget = new CalorieBudget();
+        g = new Goal();
     }
 
     /**
@@ -74,15 +76,9 @@ public class TrainR_UI extends javax.swing.JFrame {
         ButtonBackFromWorkout = new javax.swing.JButton();
         ButtonFinishWorkout = new javax.swing.JButton();
         CheckBox1 = new javax.swing.JCheckBox();
-        CheckBox2 = new javax.swing.JCheckBox();
-        CheckBox3 = new javax.swing.JCheckBox();
-        CheckBox4 = new javax.swing.JCheckBox();
-        CheckBox5 = new javax.swing.JCheckBox();
-        LabelExercise1 = new javax.swing.JLabel();
-        LabelExercise2 = new javax.swing.JLabel();
-        LabelExercise3 = new javax.swing.JLabel();
-        LabelExercise4 = new javax.swing.JLabel();
-        LabelExercise5 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -422,39 +418,11 @@ public class TrainR_UI extends javax.swing.JFrame {
             }
         });
 
-        CheckBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CheckBox2ActionPerformed(evt);
-            }
-        });
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
 
-        CheckBox3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CheckBox3ActionPerformed(evt);
-            }
-        });
-
-        CheckBox4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CheckBox4ActionPerformed(evt);
-            }
-        });
-
-        CheckBox5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CheckBox5ActionPerformed(evt);
-            }
-        });
-
-        LabelExercise1.setText("Push Ups (3x6)");
-
-        LabelExercise2.setText("Sit ups (3x5)");
-
-        LabelExercise3.setText("Squats (10x3)");
-
-        LabelExercise4.setText("Jogging (10 mins)");
-
-        LabelExercise5.setText("Jumping Jacks (20x5)");
+        jLabel1.setText("Workout Complete:");
 
         javax.swing.GroupLayout CardWorkoutLayout = new javax.swing.GroupLayout(CardWorkout);
         CardWorkout.setLayout(CardWorkoutLayout);
@@ -465,50 +433,26 @@ public class TrainR_UI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 315, Short.MAX_VALUE)
                 .addComponent(ButtonFinishWorkout)
                 .addContainerGap())
-            .addGroup(CardWorkoutLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(LabelExercise1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(LabelExercise2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(LabelExercise3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(LabelExercise4, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE))
-                    .addComponent(LabelExercise5, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CheckBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CheckBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CheckBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CheckBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        CardWorkoutLayout.setVerticalGroup(
-            CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardWorkoutLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(CardWorkoutLayout.createSequentialGroup()
-                        .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(CardWorkoutLayout.createSequentialGroup()
-                                .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(CheckBox1)
-                                    .addComponent(LabelExercise1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(LabelExercise2, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(CheckBox2, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CheckBox3))
-                            .addComponent(LabelExercise3))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CheckBox4))
-                    .addComponent(LabelExercise4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(CheckBox5)
-                    .addComponent(LabelExercise5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
+                        .addComponent(CheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(135, 135, 135))
+        );
+        CardWorkoutLayout.setVerticalGroup(
+            CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, CardWorkoutLayout.createSequentialGroup()
+                .addContainerGap(62, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(CheckBox1)
+                    .addComponent(jLabel1))
+                .addGap(51, 51, 51)
                 .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ButtonBackFromWorkout)
                     .addComponent(ButtonFinishWorkout))
@@ -541,6 +485,8 @@ public class TrainR_UI extends javax.swing.JFrame {
         PanelParent.add(CardStartWorkout);
         PanelParent.repaint();
         PanelParent.validate();
+        g.initWorkout();
+        //System.out.println(g.printStrengthWorkout());
     }//GEN-LAST:event_ButtonLoginActionPerformed
 
     private void ButtonNewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonNewUserActionPerformed
@@ -588,6 +534,8 @@ public class TrainR_UI extends javax.swing.JFrame {
         LabelDisplayCalories.setText("Daily Calorie Budget: " + String.valueOf(Math.round(userBudget.getBudget())));
         PanelParent.repaint();
         PanelParent.validate();
+        g.initWorkout();
+        //System.out.print("Test");
     }//GEN-LAST:event_ButtonCreateAccountActionPerformed
 
     private void ButtonBackFromStartWorkoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackFromStartWorkoutActionPerformed
@@ -595,6 +543,7 @@ public class TrainR_UI extends javax.swing.JFrame {
         PanelParent.add(CardLoginPage);
         PanelParent.repaint();
         PanelParent.validate();
+        g.clearWorkout();
     }//GEN-LAST:event_ButtonBackFromStartWorkoutActionPerformed
 
     private void ButtonBackFromWorkoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackFromWorkoutActionPerformed
@@ -608,27 +557,11 @@ public class TrainR_UI extends javax.swing.JFrame {
         // if a checkbox for an exercise is selected, add calories burned for that exercise
         // temporarily set to 100, rework with rework of exercise/workout class
         if(CheckBox1.isSelected()) {
-            userBudget.addWorkout(100);
-        }
-        if(CheckBox2.isSelected()) {
-            userBudget.addWorkout(100);
-        }
-        if(CheckBox3.isSelected()) {
-            userBudget.addWorkout(100);
-        }
-        if(CheckBox4.isSelected()) {
-            userBudget.addWorkout(100);
-        }
-        if(CheckBox5.isSelected()) {
-            userBudget.addWorkout(100);
+            userBudget.addWorkout(g.getWorkoutCals(user1));
         }
         
         // reset checkboxes before moving to next screen
         CheckBox1.setSelected(false);
-        CheckBox2.setSelected(false);
-        CheckBox3.setSelected(false);
-        CheckBox4.setSelected(false);
-        CheckBox5.setSelected(false);
         
         PanelParent.removeAll();
         PanelParent.add(CardStartWorkout);
@@ -643,6 +576,7 @@ public class TrainR_UI extends javax.swing.JFrame {
         PanelParent.add(CardWorkout);
         PanelParent.repaint();
         PanelParent.validate();
+        jTextArea1.setText(g.printWorkout(user1));
     }//GEN-LAST:event_ButtonStartWorkoutActionPerformed
 
     private void TextNewUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextNewUsernameActionPerformed
@@ -656,22 +590,6 @@ public class TrainR_UI extends javax.swing.JFrame {
     private void CheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CheckBox1ActionPerformed
-
-    private void CheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CheckBox2ActionPerformed
-
-    private void CheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBox3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CheckBox3ActionPerformed
-
-    private void CheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBox4ActionPerformed
-        userBudget.addWorkout(100);
-    }//GEN-LAST:event_CheckBox4ActionPerformed
-
-    private void CheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBox5ActionPerformed
-        
-    }//GEN-LAST:event_CheckBox5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -722,10 +640,6 @@ public class TrainR_UI extends javax.swing.JFrame {
     private javax.swing.JPanel CardStartWorkout;
     private javax.swing.JPanel CardWorkout;
     private javax.swing.JCheckBox CheckBox1;
-    private javax.swing.JCheckBox CheckBox2;
-    private javax.swing.JCheckBox CheckBox3;
-    private javax.swing.JCheckBox CheckBox4;
-    private javax.swing.JCheckBox CheckBox5;
     private javax.swing.JComboBox<String> ComboNewAge;
     private javax.swing.JComboBox<String> ComboNewGoal;
     private javax.swing.JComboBox<String> ComboNewHeightFt;
@@ -735,11 +649,6 @@ public class TrainR_UI extends javax.swing.JFrame {
     private javax.swing.JLabel LabelDisplayCalories;
     private javax.swing.JLabel LabelDisplayGoal;
     private javax.swing.JLabel LabelDisplayUsername;
-    private javax.swing.JLabel LabelExercise1;
-    private javax.swing.JLabel LabelExercise2;
-    private javax.swing.JLabel LabelExercise3;
-    private javax.swing.JLabel LabelExercise4;
-    private javax.swing.JLabel LabelExercise5;
     private javax.swing.JLabel LabelHeader;
     private javax.swing.JLabel LabelNewAge;
     private javax.swing.JLabel LabelNewFt;
@@ -759,5 +668,8 @@ public class TrainR_UI extends javax.swing.JFrame {
     private javax.swing.JTextField TextNewUsername;
     private javax.swing.JTextField TextPassword;
     private javax.swing.JTextField TextUsername;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

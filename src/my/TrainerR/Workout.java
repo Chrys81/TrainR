@@ -16,8 +16,9 @@ public class Workout {
         // Fields
         private String name;
         private int size;
-        private char goal;
-        private LinkedList list;
+        private String goal;
+        private LinkedList<Exercise> list;
+        private double workoutCalories;
         
         // Constructors
         public Workout() {
@@ -29,7 +30,7 @@ public class Workout {
         public Workout(String n, int s) {
             name = n;
             size = s;
-            list = new LinkedList<Exercise>();
+            list = new LinkedList<>();
         }
         
         // Get functions
@@ -41,7 +42,7 @@ public class Workout {
         {
             return size;
         }
-        public char getGoal ()
+        public String getGoal ()
         {
             return goal;
         }
@@ -55,7 +56,7 @@ public class Workout {
         {
             size = s;
         }
-        public void setGoal (char g)
+        public void setGoal (String g)
         {
             goal = g;
         }
@@ -63,9 +64,28 @@ public class Workout {
         // Linked List accesibility
         public void AddExercise (Exercise e)
         {
-            list.add(size + 1, e);
+            list.add(e);
             size++;
+            workoutCalories += e.exerciseCals;
         }
         
+        public void clearWorkout ()
+        {
+            list.clear();
+        }
+        
+        public double getWorkCalories () {
+            return workoutCalories;
+        }
+        
+        public String loopThroughWorkout() {
+            String listWorkout = "";
+            for (Exercise listElement : list) {
+                Exercise e = listElement;
+                listWorkout += e.getName()+ "\n";
+                //System.out.print("a");
+            }
+            return listWorkout;
+        }
         // Misc functions
     }

@@ -11,13 +11,16 @@ package my.TrainerR;
  */
 public class Exercise {
     String name = "";
-    String type = "";
+    double exerciseCals = 0;
     
     public void setName(String newname){
-        name = newname;
+        name = newname; // include reps in name
     }
-    public void setType(String newname){
-        type = newname;
+    public void setCals(double calories){
+        exerciseCals = calories;
+    }
+    public String getName() {
+        return name;
     }
     
 }
