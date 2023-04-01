@@ -75,10 +75,10 @@ public class Goal {
     public String printWorkout(UserProfile user1) {
         
         
-        if (user1.getGoal() == "Build Muscle") {
+        if (user1.getGoal().equals("Build Muscle")) {
             listWorkout = strength1.loopThroughWorkout();
         }
-        else if (user1.getGoal() == "Increase Endurance") {
+        else if (user1.getGoal().equals("Increase Endurance")) {
             listWorkout = endurance1.loopThroughWorkout();
         }
         else {
@@ -89,14 +89,17 @@ public class Goal {
     
     public double getWorkoutCals(UserProfile user1) {
         double calsburned = 0;
-        if (user1.getGoal() == "Build Muscle") {
+        if (user1.getGoal().equals("Build Muscle")) {
             calsburned = strength1.getWorkCalories();
+            System.out.println("strength");
         }
-        else if (user1.getGoal() == "Increase Endurance") {
+        else if (user1.getGoal().equals("Increase Endurance")) {
             calsburned = endurance1.getWorkCalories();
+            System.out.println("endurance");
         }
-        else {
+        else if (user1.getGoal().equals("Lose Weight")){
             calsburned = loseweight1.getWorkCalories();
+            System.out.println("weight");
         }
         return calsburned;
     }

@@ -17,6 +17,7 @@ public class TrainR_UI extends javax.swing.JFrame {
     UserProfile user1;
     CalorieBudget userBudget;
     Goal g;
+    UserList userlist = new UserList ();
     
     public TrainR_UI() {
         initComponents();
@@ -235,7 +236,7 @@ public class TrainR_UI extends javax.swing.JFrame {
 
         ComboNewSex.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Female", "Male" }));
 
-        ComboNewGoal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Build Muscle ", "Increase Endurance", "Lose Weight" }));
+        ComboNewGoal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Build Muscle", "Increase Endurance", "Lose Weight" }));
 
         javax.swing.GroupLayout CardNewUserPageLayout = new javax.swing.GroupLayout(CardNewUserPage);
         CardNewUserPage.setLayout(CardNewUserPageLayout);
@@ -481,11 +482,27 @@ public class TrainR_UI extends javax.swing.JFrame {
 
     private void ButtonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoginActionPerformed
         // login button. Check for existing user has not been implemented yet.
-        PanelParent.removeAll();
-        PanelParent.add(CardStartWorkout);
-        PanelParent.repaint();
-        PanelParent.validate();
-        g.initWorkout();
+        userlist.read_users();
+        int uIndex = userlist.findUsername(TextUsername.getText());
+        int pIndex = userlist.findPassword(TextPassword.getText());
+        if (uIndex >= 0 && uIndex==pIndex) {
+            user1.setTo(userlist.getActiveUser(uIndex));
+            userBudget.getMaintenance(user1.getAge(), user1.getWeight(), user1.getHeight(), user1.getSex());
+            LabelDisplayUsername.setText("User: " + user1.getUser());
+            LabelDisplayGoal.setText("Goal: " +user1.getGoal());
+            LabelDisplayCalories.setText("Daily Calorie Budget: " + String.valueOf(Math.round(userBudget.getBudget())));
+            TextUsername.setText("");
+            TextPassword.setText("");
+            PanelParent.removeAll();
+            PanelParent.add(CardStartWorkout);
+            PanelParent.repaint();
+            PanelParent.validate();
+            g.initWorkout();
+        }
+        else {
+            System.out.println("Incorrect Username and/or password."); // replace with proper error message
+        }
+        
         //System.out.println(g.printStrengthWorkout());
     }//GEN-LAST:event_ButtonLoginActionPerformed
 
@@ -622,8 +639,7 @@ public class TrainR_UI extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TrainR_UI().setVisible(true);
-                UserList userlist = new UserList ();
-                userlist.read_users();
+                
             }
         });
     }

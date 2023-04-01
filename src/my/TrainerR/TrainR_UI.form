@@ -778,12 +778,8 @@
             </Component>
             <Component class="javax.swing.JComboBox" name="ComboNewGoal">
               <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="3">
-                    <StringItem index="0" value="Build Muscle "/>
-                    <StringItem index="1" value="Increase Endurance"/>
-                    <StringItem index="2" value="Lose Weight"/>
-                  </StringArray>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Build Muscle&quot;, &quot;Increase Endurance&quot;, &quot;Lose Weight&quot; })" type="code"/>
                 </Property>
               </Properties>
               <AuxValues>
