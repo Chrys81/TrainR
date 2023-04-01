@@ -90,6 +90,16 @@ public class UserProfile {
         this.goal = goal;
     }
     
+    public void setTo(UserProfile user) {
+        this.user = user.getUser();
+        this.password = user.getPassword();
+        this.age = user.getAge();
+        this.height = user.getHeight();
+        this.weight = user.getWeight();
+        this.sex = user.getSex();
+        this.goal = user.getGoal();
+    }
+    
     public void saveProfile() { // function that saves the table to a file
         String fileName = "user_profiles.txt";
         String lineSeparator = System.getProperty("line.separator"); 

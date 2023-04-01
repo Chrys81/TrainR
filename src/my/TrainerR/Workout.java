@@ -18,11 +18,12 @@ public class Workout {
         private int size;
         private String goal;
         private LinkedList<Exercise> list;
-        private double workoutCalories;
+        private double workoutCalories = 0;
         
         // Constructors
         public Workout() {
             name = "N/A";
+            workoutCalories = 0;
             size = 0;
             list = new LinkedList<Exercise>();
         }
@@ -75,6 +76,10 @@ public class Workout {
         }
         
         public double getWorkCalories () {
+            workoutCalories = 0;
+            for (Exercise exercise : list) {
+                workoutCalories += exercise.exerciseCals;
+            }
             return workoutCalories;
         }
         
