@@ -622,6 +622,8 @@ public class TrainR_UI extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TrainR_UI().setVisible(true);
+                UserList userlist = new UserList ();
+                userlist.read_users();
             }
         });
     }
