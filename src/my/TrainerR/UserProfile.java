@@ -100,16 +100,9 @@ public class UserProfile {
         this.goal = user.getGoal();
     }
     
-    public void saveProfile() { // function that saves the table to a file
-        String fileName = "user_profiles.txt";
-        String lineSeparator = System.getProperty("line.separator"); 
-
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName, true))) {
-            bw.write(user + "," + password + "," + age + "," + height + "," + weight + "," + sex + "," + goal); //writes fields to file with commas sepreating them
-            bw.write(lineSeparator); // starts new line
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        public void save() { //Saves this UserProfile object using the ProfileSaver class.
+        ProfileSaver profileSaver = new ProfileSaver();
+        profileSaver.saveProfile(this);
     }
 }
 
