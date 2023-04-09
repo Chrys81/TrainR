@@ -3,7 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package my.TrainerR;
-import my.TrainerR.UserProfile;
+import javax.swing.ImageIcon;
+import java.awt.Image;
+
 /**
  * GUI class, containing all of the screens for the user to use the application.
  * Also contains code for filling out user information.
@@ -18,6 +20,8 @@ public class TrainR_UI extends javax.swing.JFrame {
     CalorieBudget userBudget;
     Goal g;
     UserList userlist = new UserList ();
+    Workout WorkoutList = new Workout();
+    int ImageCount = 0;
     
     public TrainR_UI() {
         initComponents();
@@ -78,13 +82,15 @@ public class TrainR_UI extends javax.swing.JFrame {
         ButtonFinishWorkout = new javax.swing.JButton();
         CheckBox1 = new javax.swing.JCheckBox();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        TextAreaWorkoutList = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        ButtonShowImages = new javax.swing.JButton();
+        CardImages = new javax.swing.JPanel();
+        LabelImage = new javax.swing.JLabel();
+        ButtonBackFromImage = new javax.swing.JButton();
+        ButtonPreviousImage = new javax.swing.JButton();
+        ButtonNextImage = new javax.swing.JButton();
+        LabelImageTitle = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -149,7 +155,7 @@ public class TrainR_UI extends javax.swing.JFrame {
                     .addGroup(CardLoginPageLayout.createSequentialGroup()
                         .addGap(210, 210, 210)
                         .addComponent(ButtonLogin)
-                        .addGap(0, 260, Short.MAX_VALUE)))
+                        .addGap(0, 387, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(CardLoginPageLayout.createSequentialGroup()
                 .addGap(57, 57, 57)
@@ -286,7 +292,7 @@ public class TrainR_UI extends javax.swing.JFrame {
                                     .addComponent(ComboNewWeight, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(LabelNewLbs)))))
-                .addContainerGap(233, Short.MAX_VALUE))
+                .addContainerGap(360, Short.MAX_VALUE))
         );
         CardNewUserPageLayout.setVerticalGroup(
             CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -380,7 +386,7 @@ public class TrainR_UI extends javax.swing.JFrame {
                         .addGroup(CardStartWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(LabelDisplayUsername, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
                             .addComponent(LabelDisplayGoal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(155, Short.MAX_VALUE))
+                .addContainerGap(282, Short.MAX_VALUE))
         );
         CardStartWorkoutLayout.setVerticalGroup(
             CardStartWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -424,86 +430,142 @@ public class TrainR_UI extends javax.swing.JFrame {
             }
         });
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        TextAreaWorkoutList.setEditable(false);
+        TextAreaWorkoutList.setColumns(20);
+        TextAreaWorkoutList.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        TextAreaWorkoutList.setRows(5);
+        jScrollPane1.setViewportView(TextAreaWorkoutList);
 
         jLabel1.setText("Workout Complete:");
 
-        jButton1.setText("jButton1");
-
-        jButton2.setText("jButton2");
-
-        jButton3.setText("jButton3");
-
-        jButton4.setText("jButton4");
-
-        jButton5.setText("jButton5");
+        ButtonShowImages.setText("Show Images");
+        ButtonShowImages.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonShowImagesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout CardWorkoutLayout = new javax.swing.GroupLayout(CardWorkout);
         CardWorkout.setLayout(CardWorkoutLayout);
         CardWorkoutLayout.setHorizontalGroup(
             CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CardWorkoutLayout.createSequentialGroup()
-                .addComponent(ButtonBackFromWorkout)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(ButtonFinishWorkout)
-                .addContainerGap())
-            .addGroup(CardWorkoutLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
                 .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CardWorkoutLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(ButtonShowImages))
+                    .addGroup(CardWorkoutLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(ButtonBackFromWorkout)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CardWorkoutLayout.createSequentialGroup()
-                        .addGap(101, 101, 101)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(118, 118, 118)
+                        .addComponent(CheckBox1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CheckBox1)))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardWorkoutLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ButtonFinishWorkout)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         CardWorkoutLayout.setVerticalGroup(
             CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, CardWorkoutLayout.createSequentialGroup()
-                .addContainerGap(56, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CardWorkoutLayout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(23, 23, 23)
-                        .addComponent(jButton2)
-                        .addGap(22, 22, 22)
-                        .addComponent(jButton3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton5)))
+                        .addGap(96, 96, 96)
+                        .addComponent(ButtonShowImages)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CheckBox1)
-                    .addComponent(jLabel1))
-                .addGap(57, 57, 57)
-                .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ButtonBackFromWorkout)
-                    .addComponent(ButtonFinishWorkout))
-                .addContainerGap())
+                    .addGroup(CardWorkoutLayout.createSequentialGroup()
+                        .addGap(81, 81, 81)
+                        .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ButtonBackFromWorkout)
+                            .addComponent(ButtonFinishWorkout)))
+                    .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel1)
+                        .addComponent(CheckBox1)))
+                .addGap(82, 82, 82))
         );
 
         PanelParent.add(CardWorkout, "card5");
+
+        LabelImage.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder()));
+
+        ButtonBackFromImage.setText("Back");
+        ButtonBackFromImage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonBackFromImageActionPerformed(evt);
+            }
+        });
+
+        ButtonPreviousImage.setText("Previous");
+        ButtonPreviousImage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonPreviousImageActionPerformed(evt);
+            }
+        });
+
+        ButtonNextImage.setText("Next");
+        ButtonNextImage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonNextImageActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout CardImagesLayout = new javax.swing.GroupLayout(CardImages);
+        CardImages.setLayout(CardImagesLayout);
+        CardImagesLayout.setHorizontalGroup(
+            CardImagesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CardImagesLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(CardImagesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ButtonPreviousImage)
+                    .addComponent(ButtonBackFromImage))
+                .addGap(18, 18, 18)
+                .addGroup(CardImagesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CardImagesLayout.createSequentialGroup()
+                        .addComponent(LabelImage, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                        .addComponent(ButtonNextImage)
+                        .addContainerGap(43, Short.MAX_VALUE))
+                    .addGroup(CardImagesLayout.createSequentialGroup()
+                        .addComponent(LabelImageTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        CardImagesLayout.setVerticalGroup(
+            CardImagesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CardImagesLayout.createSequentialGroup()
+                .addGap(190, 190, 190)
+                .addComponent(ButtonNextImage)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardImagesLayout.createSequentialGroup()
+                .addGroup(CardImagesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(CardImagesLayout.createSequentialGroup()
+                        .addGap(162, 162, 162)
+                        .addComponent(ButtonPreviousImage)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ButtonBackFromImage))
+                    .addGroup(CardImagesLayout.createSequentialGroup()
+                        .addGap(0, 27, Short.MAX_VALUE)
+                        .addComponent(LabelImageTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(LabelImage, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(29, 29, 29))
+        );
+
+        PanelParent.add(CardImages, "card6");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PanelHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(PanelParent, javax.swing.GroupLayout.DEFAULT_SIZE, 558, Short.MAX_VALUE)
+            .addComponent(PanelParent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -578,7 +640,7 @@ public class TrainR_UI extends javax.swing.JFrame {
         // calculate calorie budget
         userBudget.getMaintenance(user1.getAge(), user1.getWeight(), user1.getHeight(), user1.getSex());
         
-        user1.saveProfile();
+        user1.save();
         
         PanelParent.removeAll();
         PanelParent.add(CardStartWorkout);
@@ -628,7 +690,8 @@ public class TrainR_UI extends javax.swing.JFrame {
         PanelParent.add(CardWorkout);
         PanelParent.repaint();
         PanelParent.validate();
-        jTextArea1.setText(g.printWorkout(user1));
+        TextAreaWorkoutList.setText(g.printWorkout(user1));
+
     }//GEN-LAST:event_ButtonStartWorkoutActionPerformed
 
     private void TextNewUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextNewUsernameActionPerformed
@@ -642,6 +705,83 @@ public class TrainR_UI extends javax.swing.JFrame {
     private void CheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CheckBox1ActionPerformed
+
+    private void ButtonShowImagesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonShowImagesActionPerformed
+        
+        // diving workouts
+        WorkoutList.ArrayList = WorkoutList.ArrayWorkout(TextAreaWorkoutList.getText());
+        
+        // get image
+        ImageIcon icon = new ImageIcon(getClass().getResource("/WorkoutImages/" + WorkoutList.ArrayList[0] + ".png"));
+        Image image = icon.getImage();
+        int scaledWidth = 441; // change this to the desired width
+        int scaledHeight = 341; // change this to the desired height
+        Image scaledImage = image.getScaledInstance(scaledWidth, scaledHeight, Image.SCALE_SMOOTH);
+        
+        // set image
+        ImageIcon scaledIcon = new ImageIcon(scaledImage);
+        LabelImage.setIcon(scaledIcon);
+        
+        // show new screen
+        PanelParent.removeAll();
+        PanelParent.add(CardImages);
+        PanelParent.repaint();
+        PanelParent.validate();
+        ImageCount = 0;
+        LabelImageTitle.setText(WorkoutList.ArrayList[ImageCount]);
+    }//GEN-LAST:event_ButtonShowImagesActionPerformed
+
+    private void ButtonBackFromImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackFromImageActionPerformed
+        PanelParent.removeAll();
+        PanelParent.add(CardWorkout);
+        PanelParent.repaint();
+        PanelParent.validate();
+    }//GEN-LAST:event_ButtonBackFromImageActionPerformed
+
+    private void ButtonNextImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonNextImageActionPerformed
+
+        if (ImageCount > WorkoutList.ArrayList.length - 2){
+            
+            ImageCount = WorkoutList.ArrayList.length - 1;
+        }
+        
+        else {
+            ImageCount = ImageCount + 1;
+            ImageIcon icon = new ImageIcon(getClass().getResource("/WorkoutImages/" + WorkoutList.ArrayList[ImageCount] + ".png"));
+            Image image = icon.getImage();
+            int scaledWidth = 441; // change this to the desired width
+            int scaledHeight = 341; // change this to the desired height
+            Image scaledImage = image.getScaledInstance(scaledWidth, scaledHeight, Image.SCALE_SMOOTH);
+
+            // set image
+            ImageIcon scaledIcon = new ImageIcon(scaledImage);
+            LabelImage.setIcon(scaledIcon);
+            LabelImageTitle.setText(WorkoutList.ArrayList[ImageCount]);
+        }
+        
+    }//GEN-LAST:event_ButtonNextImageActionPerformed
+
+    private void ButtonPreviousImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPreviousImageActionPerformed
+
+        if (ImageCount < 1){
+            
+            ImageCount = 0;
+        }
+        
+        else {
+            ImageCount = ImageCount - 1;
+            ImageIcon icon = new ImageIcon(getClass().getResource("/WorkoutImages/" + WorkoutList.ArrayList[ImageCount] + ".png"));
+            Image image = icon.getImage();
+            int scaledWidth = 441; // change this to the desired width
+            int scaledHeight = 341; // change this to the desired height
+            Image scaledImage = image.getScaledInstance(scaledWidth, scaledHeight, Image.SCALE_SMOOTH);
+
+            // set image
+            ImageIcon scaledIcon = new ImageIcon(scaledImage);
+            LabelImage.setIcon(scaledIcon);
+            LabelImageTitle.setText(WorkoutList.ArrayList[ImageCount]);
+        }
+    }//GEN-LAST:event_ButtonPreviousImageActionPerformed
 
     /**
      * @param args the command line arguments
@@ -680,6 +820,7 @@ public class TrainR_UI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonBackFromImage;
     private javax.swing.JButton ButtonBackFromNewUser;
     private javax.swing.JButton ButtonBackFromStartWorkout;
     private javax.swing.JButton ButtonBackFromWorkout;
@@ -687,7 +828,11 @@ public class TrainR_UI extends javax.swing.JFrame {
     private javax.swing.JButton ButtonFinishWorkout;
     private javax.swing.JButton ButtonLogin;
     private javax.swing.JButton ButtonNewUser;
+    private javax.swing.JButton ButtonNextImage;
+    private javax.swing.JButton ButtonPreviousImage;
+    private javax.swing.JButton ButtonShowImages;
     private javax.swing.JButton ButtonStartWorkout;
+    private javax.swing.JPanel CardImages;
     private javax.swing.JPanel CardLoginPage;
     private javax.swing.JPanel CardNewUserPage;
     private javax.swing.JPanel CardStartWorkout;
@@ -703,6 +848,8 @@ public class TrainR_UI extends javax.swing.JFrame {
     private javax.swing.JLabel LabelDisplayGoal;
     private javax.swing.JLabel LabelDisplayUsername;
     private javax.swing.JLabel LabelHeader;
+    private javax.swing.JLabel LabelImage;
+    private javax.swing.JLabel LabelImageTitle;
     private javax.swing.JLabel LabelNewAge;
     private javax.swing.JLabel LabelNewFt;
     private javax.swing.JLabel LabelNewGoal;
@@ -717,17 +864,12 @@ public class TrainR_UI extends javax.swing.JFrame {
     private javax.swing.JLabel LabelUsername;
     private javax.swing.JPanel PanelHeader;
     private javax.swing.JPanel PanelParent;
+    private javax.swing.JTextArea TextAreaWorkoutList;
     private javax.swing.JTextField TextNewPassword;
     private javax.swing.JTextField TextNewUsername;
     private javax.swing.JTextField TextPassword;
     private javax.swing.JTextField TextUsername;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
