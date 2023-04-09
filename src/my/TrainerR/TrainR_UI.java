@@ -712,7 +712,7 @@ public class TrainR_UI extends javax.swing.JFrame {
         WorkoutList.ArrayList = WorkoutList.ArrayWorkout(TextAreaWorkoutList.getText());
         
         // get image
-        ImageIcon icon = new ImageIcon(getClass().getResource("/WorkoutImages/" + WorkoutList.ArrayList[0] + ".png"));
+        ImageIcon icon = new ImageIcon(getClass().getResource("/Images/" + WorkoutList.ArrayList[0] + ".png"));
         Image image = icon.getImage();
         int scaledWidth = 441; // change this to the desired width
         int scaledHeight = 341; // change this to the desired height
@@ -747,7 +747,7 @@ public class TrainR_UI extends javax.swing.JFrame {
         
         else {
             ImageCount = ImageCount + 1;
-            ImageIcon icon = new ImageIcon(getClass().getResource("/WorkoutImages/" + WorkoutList.ArrayList[ImageCount] + ".png"));
+            ImageIcon icon = new ImageIcon(getClass().getResource("/Images/" + WorkoutList.ArrayList[ImageCount] + ".png"));
             Image image = icon.getImage();
             int scaledWidth = 441; // change this to the desired width
             int scaledHeight = 341; // change this to the desired height
