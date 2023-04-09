@@ -20,6 +20,10 @@ public class Workout {
         private LinkedList<Exercise> list;
         private double workoutCalories = 0;
         
+        // chrys Added this
+        String[] ArrayList;
+        // ----------------
+        
         // Constructors
         public Workout() {
             name = "N/A";
@@ -92,5 +96,11 @@ public class Workout {
             }
             return listWorkout;
         }
-        // Misc functions
+        
+        // chrys added this
+        public String[] ArrayWorkout(String StrWorkout) {
+            String[] ArrayList = StrWorkout.split("\n");
+            return ArrayList;
+        }
+        // ----------------
     }
