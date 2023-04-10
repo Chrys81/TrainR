@@ -23,12 +23,32 @@ public class TrainR_UI extends javax.swing.JFrame {
     Workout WorkoutList = new Workout();
     int ImageCount = 0;
     
+
+    
     public TrainR_UI() {
         initComponents();
         // create objects for use
         user1 = new UserProfile(); 
         userBudget = new CalorieBudget();
         g = new Goal();
+        
+        // Giga Chad
+        ImageIcon Header = new ImageIcon(getClass().getResource("/Images/GigaChad.png"));
+        Image HeaderGiga = Header.getImage();
+        int scaledWidth = 133; // change this to the desired width
+        int scaledHeight = 100; // change this to the desired height
+        Image scaledGiga = HeaderGiga.getScaledInstance(scaledWidth, scaledHeight, Image.SCALE_SMOOTH);
+        ImageIcon IconGiga = new ImageIcon(scaledGiga);
+        LabelHeaderIcon.setIcon(IconGiga);
+        
+        // TrainR logo
+        ImageIcon HeaderLogo = new ImageIcon(getClass().getResource("/Images/logo-no-background.png"));
+        Image HeaderTrainR = HeaderLogo.getImage();
+        int scaledWidthLogo = 333; // change this to the desired width
+        int scaledHeightLogo = 60; // change this to the desired height
+        Image scaledLogo = HeaderTrainR.getScaledInstance(scaledWidthLogo, scaledHeightLogo, Image.SCALE_SMOOTH);
+        ImageIcon IconLogo = new ImageIcon(scaledLogo);
+        LabelHeader.setIcon(IconLogo);
     }
 
     /**
@@ -42,11 +62,12 @@ public class TrainR_UI extends javax.swing.JFrame {
 
         PanelHeader = new javax.swing.JPanel();
         LabelHeader = new javax.swing.JLabel();
+        LabelHeaderIcon = new javax.swing.JLabel();
         PanelParent = new javax.swing.JPanel();
         CardLoginPage = new javax.swing.JPanel();
+        LabelUsername = new javax.swing.JLabel();
         ButtonLogin = new javax.swing.JButton();
         ButtonNewUser = new javax.swing.JButton();
-        LabelUsername = new javax.swing.JLabel();
         LabelPassword = new javax.swing.JLabel();
         TextUsername = new javax.swing.JTextField();
         TextPassword = new javax.swing.JTextField();
@@ -94,36 +115,46 @@ public class TrainR_UI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        PanelHeader.setBackground(new java.awt.Color(204, 255, 204));
+        PanelHeader.setBackground(new java.awt.Color(102, 204, 255));
         PanelHeader.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        LabelHeader.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        LabelHeader.setBackground(new java.awt.Color(0, 102, 255));
+        LabelHeader.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 48)); // NOI18N
         LabelHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LabelHeader.setText("TrainR");
         LabelHeader.setToolTipText("");
+
+        LabelHeaderIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/GigaChad.png"))); // NOI18N
+        LabelHeaderIcon.setText("jLabel2");
 
         javax.swing.GroupLayout PanelHeaderLayout = new javax.swing.GroupLayout(PanelHeader);
         PanelHeader.setLayout(PanelHeaderLayout);
         PanelHeaderLayout.setHorizontalGroup(
             PanelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelHeaderLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(LabelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addComponent(LabelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LabelHeaderIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         PanelHeaderLayout.setVerticalGroup(
             PanelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelHeaderLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(LabelHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+            .addGroup(PanelHeaderLayout.createSequentialGroup()
+                .addComponent(LabelHeaderIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(PanelHeaderLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(LabelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         PanelParent.setLayout(new java.awt.CardLayout());
 
-        CardLoginPage.setBackground(new java.awt.Color(153, 153, 255));
+        CardLoginPage.setBackground(new java.awt.Color(255, 255, 255));
         CardLoginPage.setBorder(javax.swing.BorderFactory.createTitledBorder("Login Page"));
         CardLoginPage.setPreferredSize(new java.awt.Dimension(500, 400));
+
+        LabelUsername.setText("Username:");
 
         ButtonLogin.setText("Login");
         ButtonLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -139,8 +170,6 @@ public class TrainR_UI extends javax.swing.JFrame {
             }
         });
 
-        LabelUsername.setText("Username:");
-
         LabelPassword.setText("Password:");
 
         javax.swing.GroupLayout CardLoginPageLayout = new javax.swing.GroupLayout(CardLoginPage);
@@ -149,46 +178,49 @@ public class TrainR_UI extends javax.swing.JFrame {
             CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CardLoginPageLayout.createSequentialGroup()
                 .addGroup(CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardLoginPageLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ButtonNewUser))
                     .addGroup(CardLoginPageLayout.createSequentialGroup()
-                        .addGap(210, 210, 210)
-                        .addComponent(ButtonLogin)
-                        .addGap(0, 387, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(CardLoginPageLayout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addGroup(CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(LabelUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
-                    .addComponent(LabelPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(28, 28, 28)
-                .addGroup(CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(TextUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
-                    .addComponent(TextPassword))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(62, 62, 62)
+                        .addComponent(LabelUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(CardLoginPageLayout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addComponent(LabelPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(TextPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(CardLoginPageLayout.createSequentialGroup()
+                        .addGap(215, 215, 215)
+                        .addComponent(ButtonLogin))
+                    .addGroup(CardLoginPageLayout.createSequentialGroup()
+                        .addGap(187, 187, 187)
+                        .addComponent(TextUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(67, 67, 67))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardLoginPageLayout.createSequentialGroup()
+                .addComponent(ButtonNewUser, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35))
         );
         CardLoginPageLayout.setVerticalGroup(
             CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardLoginPageLayout.createSequentialGroup()
-                .addGap(73, 73, 73)
+            .addGroup(CardLoginPageLayout.createSequentialGroup()
                 .addGroup(CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LabelUsername)
-                    .addComponent(TextUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LabelPassword)
-                    .addComponent(TextPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
-                .addComponent(ButtonLogin)
-                .addGap(134, 134, 134)
+                    .addGroup(CardLoginPageLayout.createSequentialGroup()
+                        .addGap(81, 81, 81)
+                        .addComponent(LabelUsername)
+                        .addGap(40, 40, 40)
+                        .addGroup(CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(LabelPassword)
+                            .addComponent(TextPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(40, 40, 40)
+                        .addComponent(ButtonLogin))
+                    .addGroup(CardLoginPageLayout.createSequentialGroup()
+                        .addGap(81, 81, 81)
+                        .addComponent(TextUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
                 .addComponent(ButtonNewUser)
-                .addContainerGap())
+                .addGap(17, 17, 17))
         );
 
         PanelParent.add(CardLoginPage, "card3");
 
-        CardNewUserPage.setBackground(new java.awt.Color(255, 255, 204));
+        CardNewUserPage.setBackground(new java.awt.Color(255, 255, 255));
         CardNewUserPage.setBorder(javax.swing.BorderFactory.createTitledBorder("New User Page"));
         CardNewUserPage.setPreferredSize(new java.awt.Dimension(500, 400));
 
@@ -292,7 +324,7 @@ public class TrainR_UI extends javax.swing.JFrame {
                                     .addComponent(ComboNewWeight, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(LabelNewLbs)))))
-                .addContainerGap(360, Short.MAX_VALUE))
+                .addContainerGap(175, Short.MAX_VALUE))
         );
         CardNewUserPageLayout.setVerticalGroup(
             CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -329,7 +361,7 @@ public class TrainR_UI extends javax.swing.JFrame {
                 .addGroup(CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LabelNewGoal)
                     .addComponent(ComboNewGoal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addComponent(ButtonCreateAccount)
                 .addGap(51, 51, 51)
                 .addComponent(ButtonBackFromNewUser)
@@ -338,7 +370,7 @@ public class TrainR_UI extends javax.swing.JFrame {
 
         PanelParent.add(CardNewUserPage, "card2");
 
-        CardStartWorkout.setBackground(new java.awt.Color(255, 0, 153));
+        CardStartWorkout.setBackground(new java.awt.Color(255, 255, 255));
         CardStartWorkout.setBorder(javax.swing.BorderFactory.createTitledBorder("Start Workout Page"));
         CardStartWorkout.setPreferredSize(new java.awt.Dimension(500, 400));
 
@@ -386,7 +418,7 @@ public class TrainR_UI extends javax.swing.JFrame {
                         .addGroup(CardStartWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(LabelDisplayUsername, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
                             .addComponent(LabelDisplayGoal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
         CardStartWorkoutLayout.setVerticalGroup(
             CardStartWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -395,7 +427,7 @@ public class TrainR_UI extends javax.swing.JFrame {
                 .addComponent(LabelDisplayUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(LabelDisplayGoal, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addComponent(LabelDisplayCalories, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(ButtonStartWorkout)
@@ -406,7 +438,7 @@ public class TrainR_UI extends javax.swing.JFrame {
 
         PanelParent.add(CardStartWorkout, "card4");
 
-        CardWorkout.setBackground(new java.awt.Color(0, 255, 255));
+        CardWorkout.setBackground(new java.awt.Color(255, 255, 255));
         CardWorkout.setBorder(javax.swing.BorderFactory.createTitledBorder("Workout Page"));
         CardWorkout.setPreferredSize(new java.awt.Dimension(500, 400));
 
@@ -465,9 +497,7 @@ public class TrainR_UI extends javax.swing.JFrame {
                         .addComponent(CheckBox1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CardWorkoutLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ButtonFinishWorkout)))
+                    .addComponent(ButtonFinishWorkout, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         CardWorkoutLayout.setVerticalGroup(
@@ -479,7 +509,6 @@ public class TrainR_UI extends javax.swing.JFrame {
                     .addGroup(CardWorkoutLayout.createSequentialGroup()
                         .addGap(96, 96, 96)
                         .addComponent(ButtonShowImages)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(CardWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(CardWorkoutLayout.createSequentialGroup()
                         .addGap(81, 81, 81)
@@ -493,6 +522,9 @@ public class TrainR_UI extends javax.swing.JFrame {
         );
 
         PanelParent.add(CardWorkout, "card5");
+
+        CardImages.setBackground(new java.awt.Color(255, 255, 255));
+        CardImages.setPreferredSize(new java.awt.Dimension(700, 450));
 
         LabelImage.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder()));
 
@@ -848,6 +880,7 @@ public class TrainR_UI extends javax.swing.JFrame {
     private javax.swing.JLabel LabelDisplayGoal;
     private javax.swing.JLabel LabelDisplayUsername;
     private javax.swing.JLabel LabelHeader;
+    private javax.swing.JLabel LabelHeaderIcon;
     private javax.swing.JLabel LabelImage;
     private javax.swing.JLabel LabelImageTitle;
     private javax.swing.JLabel LabelNewAge;
