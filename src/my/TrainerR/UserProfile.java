@@ -101,8 +101,15 @@ public class UserProfile {
     }
     
         public void save() { //Saves this UserProfile object using the ProfileSaver class.
+
         ProfileSaver profileSaver = new ProfileSaver();
         profileSaver.saveProfile(this);
+
+        if (profileSaver.isProfileSaved()) {
+            System.out.println("Profile saved successfully in the user's home folder."); //If the file has been saved successfully, a message is printed to the console.
+        } else {
+            System.out.println("Error: The profile could not be saved in the user's home folder.");
+        }
     }
 }
 
