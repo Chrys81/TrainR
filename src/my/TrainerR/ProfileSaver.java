@@ -3,6 +3,7 @@ package my.TrainerR;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.File;
 
 //This class is responsible for saving user profiles to a file.
 public class ProfileSaver {
@@ -30,5 +31,4 @@ public class ProfileSaver {
         File file = new File(fileName);
         return file.exists();
     }
-}
 }
