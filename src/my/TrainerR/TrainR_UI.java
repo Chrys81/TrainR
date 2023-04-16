@@ -98,6 +98,10 @@ public class TrainR_UI extends javax.swing.JFrame {
         LabelDisplayCalories = new javax.swing.JLabel();
         LabelDisplayUsername = new javax.swing.JLabel();
         LabelDisplayGoal = new javax.swing.JLabel();
+        comboSelectWorkout = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         CardWorkout = new javax.swing.JPanel();
         ButtonBackFromWorkout = new javax.swing.JButton();
         ButtonFinishWorkout = new javax.swing.JButton();
@@ -200,9 +204,9 @@ public class TrainR_UI extends javax.swing.JFrame {
         CardLoginPageLayout.setVerticalGroup(
             CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CardLoginPageLayout.createSequentialGroup()
+                .addGap(81, 81, 81)
                 .addGroup(CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(CardLoginPageLayout.createSequentialGroup()
-                        .addGap(81, 81, 81)
                         .addComponent(LabelUsername)
                         .addGap(40, 40, 40)
                         .addGroup(CardLoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -210,9 +214,7 @@ public class TrainR_UI extends javax.swing.JFrame {
                             .addComponent(TextPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(40, 40, 40)
                         .addComponent(ButtonLogin))
-                    .addGroup(CardLoginPageLayout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(TextUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(TextUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
                 .addComponent(ButtonNewUser)
                 .addGap(17, 17, 17))
@@ -324,7 +326,7 @@ public class TrainR_UI extends javax.swing.JFrame {
                                     .addComponent(ComboNewWeight, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(LabelNewLbs)))))
-                .addContainerGap(175, Short.MAX_VALUE))
+                .addContainerGap(375, Short.MAX_VALUE))
         );
         CardNewUserPageLayout.setVerticalGroup(
             CardNewUserPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -398,6 +400,14 @@ public class TrainR_UI extends javax.swing.JFrame {
         LabelDisplayGoal.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         LabelDisplayGoal.setText("Goal: " + "Get from database");
 
+        comboSelectWorkout.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3"}));
+
+        jLabel2.setText("Your Calorie Budget is the number of calorie syou can eat a day to maintain your");
+
+        jLabel3.setText("current weight. Eat more than this number to gain weight, and less to lose weight.");
+
+        jLabel4.setText("Select Workout:");
+
         javax.swing.GroupLayout CardStartWorkoutLayout = new javax.swing.GroupLayout(CardStartWorkout);
         CardStartWorkout.setLayout(CardStartWorkoutLayout);
         CardStartWorkoutLayout.setHorizontalGroup(
@@ -408,17 +418,27 @@ public class TrainR_UI extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(ButtonBackFromStartWorkout))
                     .addGroup(CardStartWorkoutLayout.createSequentialGroup()
-                        .addGap(199, 199, 199)
-                        .addComponent(ButtonStartWorkout))
-                    .addGroup(CardStartWorkoutLayout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(LabelDisplayCalories, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(CardStartWorkoutLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(CardStartWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(LabelDisplayUsername, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                            .addComponent(LabelDisplayGoal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(97, Short.MAX_VALUE))
+                            .addComponent(LabelDisplayGoal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(CardStartWorkoutLayout.createSequentialGroup()
+                        .addGap(198, 198, 198)
+                        .addComponent(ButtonStartWorkout))
+                    .addGroup(CardStartWorkoutLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(LabelDisplayCalories, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(CardStartWorkoutLayout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addGroup(CardStartWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(CardStartWorkoutLayout.createSequentialGroup()
+                        .addGap(165, 165, 165)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(comboSelectWorkout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
         CardStartWorkoutLayout.setVerticalGroup(
             CardStartWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -427,13 +447,21 @@ public class TrainR_UI extends javax.swing.JFrame {
                 .addComponent(LabelDisplayUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(LabelDisplayGoal, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addGap(43, 43, 43)
                 .addComponent(LabelDisplayCalories, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(CardStartWorkoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(comboSelectWorkout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
                 .addGap(18, 18, 18)
                 .addComponent(ButtonStartWorkout)
-                .addGap(136, 136, 136)
+                .addGap(58, 58, 58)
                 .addComponent(ButtonBackFromStartWorkout)
-                .addContainerGap())
+                .addGap(25, 25, 25))
         );
 
         PanelParent.add(CardStartWorkout, "card4");
@@ -562,9 +590,9 @@ public class TrainR_UI extends javax.swing.JFrame {
                 .addGroup(CardImagesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(CardImagesLayout.createSequentialGroup()
                         .addComponent(LabelImage, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                         .addComponent(ButtonNextImage)
-                        .addContainerGap(43, Short.MAX_VALUE))
+                        .addContainerGap(50, Short.MAX_VALUE))
                     .addGroup(CardImagesLayout.createSequentialGroup()
                         .addComponent(LabelImageTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -611,7 +639,7 @@ public class TrainR_UI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoginActionPerformed
-        // login button. Check for existing user has not been implemented yet.
+        // login button. 
         userlist.read_users();
         int uIndex = userlist.findUsername(TextUsername.getText());
         int pIndex = userlist.findPassword(TextPassword.getText());
@@ -700,10 +728,10 @@ public class TrainR_UI extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonBackFromWorkoutActionPerformed
 
     private void ButtonFinishWorkoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonFinishWorkoutActionPerformed
-        // if a checkbox for an exercise is selected, add calories burned for that exercise
-        // temporarily set to 100, rework with rework of exercise/workout class
+        // if checkbox selected, add workout cals
         if(CheckBox1.isSelected()) {
-            userBudget.addWorkout(g.getWorkoutCals(user1));
+            String selectedWorkout = comboSelectWorkout.getSelectedItem().toString();
+            userBudget.addWorkout(g.getWorkoutCals(user1,selectedWorkout));
         }
         
         // reset checkboxes before moving to next screen
@@ -722,7 +750,8 @@ public class TrainR_UI extends javax.swing.JFrame {
         PanelParent.add(CardWorkout);
         PanelParent.repaint();
         PanelParent.validate();
-        TextAreaWorkoutList.setText(g.printWorkout(user1));
+        String selectedWorkout = comboSelectWorkout.getSelectedItem().toString();
+        TextAreaWorkoutList.setText(g.printWorkout(user1, selectedWorkout));
 
     }//GEN-LAST:event_ButtonStartWorkoutActionPerformed
 
@@ -902,7 +931,11 @@ public class TrainR_UI extends javax.swing.JFrame {
     private javax.swing.JTextField TextNewUsername;
     private javax.swing.JTextField TextPassword;
     private javax.swing.JTextField TextUsername;
+    private javax.swing.JComboBox<String> comboSelectWorkout;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

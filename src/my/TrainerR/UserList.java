@@ -21,7 +21,9 @@ public class UserList {
     
     public void read_users() {
         try {
-          File raw_Text = new File("user_profiles.txt");
+            String userHome = System.getProperty("user.home");
+            String fileName = userHome + File.separator + "user_profiles.txt";
+          File raw_Text = new File(fileName);
           Scanner profileReader = new Scanner(raw_Text);
           while (profileReader.hasNextLine()) {
             UserProfile tempUser = new UserProfile();
