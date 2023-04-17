@@ -10,8 +10,10 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 /**
- *
+ * Manages the list of saved users in the external file.
  * @author alexa
+ * @see UserProfile
+ * @see ProfileSaver
  */
 public class UserList {
     int n = 0;
@@ -19,11 +21,12 @@ public class UserList {
     
     UserProfile blankUser = new UserProfile();
     
+    /**
+     * Reads all of the users and their data from the external save file.
+     */
     public void read_users() {
         try {
-            String userHome = System.getProperty("user.home");
-            String fileName = userHome + File.separator + "user_profiles.txt";
-          File raw_Text = new File(fileName);
+          File raw_Text = new File("user_profiles.txt");
           Scanner profileReader = new Scanner(raw_Text);
           while (profileReader.hasNextLine()) {
             UserProfile tempUser = new UserProfile();
@@ -46,12 +49,20 @@ public class UserList {
         }
     }
     
+    /**
+     * Prints the list of users ages.
+     */
     public void printList() {
         for(int i=0;i<n;i++) {
             System.out.println(userList.get(i).getAge());
         }
     }
     
+    /**
+     * Searches for a specific username out of the list and returns the index it was found, -1 if not found.
+     * @param username
+     * @return m
+     */
     public int findUsername(String username) {
         int m = 0;
         for (int i=0; i<n; i++) {
@@ -67,6 +78,11 @@ public class UserList {
         return m;
     }
     
+    /**
+     * Searches for a specific password out of the listand returns the index it was found, -1 if not found.
+     * @param password
+     * @return m
+     */
     public int findPassword(String password) {
         int m = 0;
         for (int i=0; i<n; i++) {
@@ -82,6 +98,11 @@ public class UserList {
         return m;
     }
     
+    /**
+     * Sets the active user's info to all of the info found that the specified index.
+     * @param index
+     * @return activeUser
+     */
     public UserProfile getActiveUser(int index) {
         UserProfile activeUser = new UserProfile();
         activeUser.setUser(userList.get(index).getUser());

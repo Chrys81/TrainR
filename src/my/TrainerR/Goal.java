@@ -5,8 +5,10 @@
 package my.TrainerR;
 
 /**
- *
+ * Holds the goal and workout type for the user.
+ * Compiles all of the exercises into the different types of workouts.
  * @author alexa
+ * @see Workout
  */
 public class Goal {
     String listWorkout;
@@ -49,6 +51,9 @@ public class Goal {
     Exercise squat = new Exercise();
     Exercise bike = new Exercise();
     
+    /**
+     * Initializes all of the workout types with different exercises.
+     */
     public void initWorkout() {
         benchPress.setName("Bench Press 3x10");
         benchPress.setCals(100);
@@ -146,6 +151,9 @@ public class Goal {
         loseweight3.AddExercise(tricepPulldown);
     }
     
+    /**
+     * Removes all of the exercises from the workouts.
+     */
     public void clearWorkout() {
         strength1.clearWorkout();
         strength2.clearWorkout();
@@ -157,6 +165,12 @@ public class Goal {
         loseweight2.clearWorkout();
         loseweight3.clearWorkout();
     }
+    
+    /**
+     * Prints out all of the exercises in the workout.
+     * @param user1
+     * @return listWorkout
+     */
     public String printWorkout(UserProfile user1, String selectedWorkout) {
         
         
@@ -205,6 +219,11 @@ public class Goal {
         return listWorkout;
     }
     
+    /**
+     * Returns how many calories a workout burns.
+     * @param user1
+     * @return calsburned
+     */
     public double getWorkoutCals(UserProfile user1, String selectedWorkout) {
         double calsburned = 0;
         if (user1.getGoal().equals("Build Muscle")) {

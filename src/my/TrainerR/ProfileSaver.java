@@ -5,12 +5,18 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.File;
 
-//This class is responsible for saving user profiles to a file.
+/**
+ * Saves user profiles to a file.
+ */
 public class ProfileSaver {
      // Saves a UserProfile object to a file named "user_profiles.txt" in the user's home directory.
      // Each field of the UserProfile object is written as a comma-separated value (CSV).
      // A new line is added after each UserProfile object.
     
+    /**
+     * Saves the profile data to a user named file in the home directory.
+     * @param userProfile 
+     */
     public void saveProfile(UserProfile userProfile) {
         String userHome = System.getProperty("user.home");
         String fileName = userHome + File.separator + "user_profiles.txt";
@@ -23,8 +29,9 @@ public class ProfileSaver {
             e.printStackTrace();
         }
     }
-
-    // Checks if the "user_profiles.txt" file exists in the user's home directory.
+    /**
+     * Checks if the "user_profiles.txt" file exists in the user's home directory.
+     */
     public boolean isProfileSaved() {
         String userHome = System.getProperty("user.home");
         String fileName = userHome + File.separator + "user_profiles.txt";

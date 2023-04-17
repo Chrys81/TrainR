@@ -9,8 +9,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- * Class for creating a user profile. Contains methods to set and get all
- * relevant traits, as well as a method to add  it to a file for future access.
+ * Creates a user profile. 
+ * Contains methods to set and get all relevant traits, as well as a method to add  it to a file for future access.
  * @author NX1
  */
 public class UserProfile {
@@ -22,7 +22,9 @@ public class UserProfile {
     private String sex;
     private String goal;
     
-    // Constructor to initialize all fields
+    /**
+     * Initializes the profile with default info.
+     */
     public UserProfile() {
         this.user = "blank";
         this.password = "password";
@@ -33,63 +35,122 @@ public class UserProfile {
         this.goal = "Build Muscle";
     }
     
-    // Getters and Setters for all fields
+    /**
+     * Returns the user of the profile.
+     * @return user
+     */
     public String getUser() {
         return user;
     }
-
+    
+    /**
+     * Sets the user of the profile.
+     * @param user 
+     */
     public void setUser(String user) {
         this.user = user;
     }
-
+    
+    /**
+     * Returns the password of the profile.
+     * @return password
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * Sets the password of the profile.
+     * @param password 
+     */
     public void setPassword(String password) {
         this.password = password;
     }
 
+    /**
+     * Returns the age of the profile.
+     * @return age
+     */
     public int getAge() {
         return age;
     }
 
+    /**
+     * Sets the age of the profile.
+     * @param ageS 
+     */
     public void setAge(String ageS) {
         this.age = Integer.parseInt(ageS);
     }
 
+    /**
+     * Returns the height of the profile.
+     * @return height
+     */
     public int getHeight() {
         return height;
     }
 
+    /**
+     * Sets the height of the profile.
+     * @param height 
+     */
     public void setHeight(int height) {
         this.height = height;
     }
 
+    /**
+     * Returns the weight of the profile.
+     * @return weight
+     */
     public int getWeight() {
         return weight;
     }
 
+    /**
+     * Sets the weight of the profile.
+     * @param weightS 
+     */
     public void setWeight(String weightS) {
         this.weight = Integer.parseInt(weightS);
     }
 
+    /**
+     * Returns the sex of the profile.
+     * @return sex
+     */
     public String getSex() {
         return sex;
     }
 
+    /**
+     * Sets the sex of the profile.
+     * @param sex 
+     */
     public void setSex(String sex) {
         this.sex = sex;
     }
 
+    /**
+     * Returns the goal of the profile.
+     * @return goal
+     */
     public String getGoal() {
         return goal;
     }
 
+    /**
+     * Sets the goal of the profile.
+     * @param goal 
+     */
     public void setGoal(String goal) {
         this.goal = goal;
     }
     
+    /**
+     * Sets all of the fields of the profile to specified inputs.
+     * @param user 
+     */
     public void setTo(UserProfile user) {
         this.user = user.getUser();
         this.password = user.getPassword();
@@ -100,8 +161,10 @@ public class UserProfile {
         this.goal = user.getGoal();
     }
     
-        public void save() { //Saves this UserProfile object using the ProfileSaver class.
-
+    /**
+     * Saves this UserProfile object using the ProfileSaver class.
+     */
+    public void save() {
         ProfileSaver profileSaver = new ProfileSaver();
         profileSaver.saveProfile(this);
 
