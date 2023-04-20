@@ -168,6 +168,7 @@ public class Goal {
     /**
      * Prints out all of the exercises in the workout.
      * @param user1 User the workouts are being accessed by.
+     * @param selectedWorkout Workout selected by user.
      * @return Text of all exercises in the workout based on user.
      * @see Workout
      */
@@ -222,7 +223,7 @@ public class Goal {
     /**
      * Returns how many calories a workout burns.
      * @param user1 User currently logged in.
-     * @param selectedWorkout
+     * @param selectedWorkout workout user has selected.
      * @return Number of calories burned in a workout.
      */
     public double getWorkoutCals(UserProfile user1, String selectedWorkout) {

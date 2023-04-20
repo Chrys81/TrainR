@@ -14,7 +14,7 @@ public class ProfileSaver {
      // A new line is added after each UserProfile object.
     
     /**
-     * Saves the profile data to a user named file in the home directory.
+     * Saves the profile data to a text file in the home directory.
      * @param userProfile an object of type UserProfile that is being saved to the text file.
      */
     public void saveProfile(UserProfile userProfile) {

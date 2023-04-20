@@ -19,12 +19,10 @@ public class UserList {
     int n = 0;
     ArrayList<UserProfile> userList = new ArrayList<UserProfile>();
     
-    UserProfile blankUser = new UserProfile();
-    
     /**
      * Reads all of the users and their data from the external save file.
      */
-    public void read_users() {
+    public void readUsers() {
         try {
           String userHome = System.getProperty("user.home");
             String fileName = userHome + File.separator + "user_profiles.txt";
@@ -51,11 +49,6 @@ public class UserList {
         }
     }
     
-    public void printList() {
-        for(int i=0;i<n;i++) {
-            System.out.println(userList.get(i).getAge());
-        }
-    }
     /**
      * Searches for a specific username out of the list and returns the index it was found, -1 if not found.
      * @param username Entered username
@@ -97,7 +90,7 @@ public class UserList {
     }
     
     /**
-     * Sets the active user's info to all of the info found that the specified index.
+     * Sets the active user's info to all of the info found at a specified index.
      * @param index Location of user in user list
      * @return active user with associated data.
      */

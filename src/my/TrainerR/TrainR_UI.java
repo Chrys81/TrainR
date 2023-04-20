@@ -640,7 +640,7 @@ public class TrainR_UI extends javax.swing.JFrame {
 
     private void ButtonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoginActionPerformed
         // login button. 
-        userlist.read_users();
+        userlist.readUsers();
         int uIndex = userlist.findUsername(TextUsername.getText());
         int pIndex = userlist.findPassword(TextPassword.getText());
         if (uIndex >= 0 && uIndex== pIndex) {
@@ -667,6 +667,8 @@ public class TrainR_UI extends javax.swing.JFrame {
     private void ButtonNewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonNewUserActionPerformed
         // sends user to input new user information form
         PanelParent.removeAll();
+        TextNewUsername.setText("");
+        TextNewPassword.setText("");
         PanelParent.add(CardNewUserPage);
         PanelParent.repaint();
         PanelParent.validate();

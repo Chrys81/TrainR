@@ -16,7 +16,6 @@ public class Workout {
         // Fields
         private String name;
         private int size;
-        private String goal;
         private LinkedList<Exercise> list;
         private double workoutCalories = 0;
 
@@ -44,59 +43,7 @@ public class Workout {
             list = new LinkedList<>();
         }
         
-        /**
-         * Returns the name of the workout.
-         * @return name
-         */
-        public String getName ()
-        {
-            return name;
-        }
         
-        /**
-         * Returns the size of the workout.
-         * @return size
-         */
-        public int getSize ()
-        {
-            return size;
-        }
-        
-        /**
-         * Returns the goal of the workout.
-         * @return goal
-         */
-        public String getGoal ()
-        {
-            return goal;
-        }
-        
-        /**
-         * Sets the name of the workout.
-         * @param n 
-         */
-        public void setName (String n)
-        {
-            name = n;
-        }
-        
-        /**
-         * Sets the size of the workout.
-         * @param s 
-         */
-        public void setSize (int s)
-        {
-            size = s;
-        }
-        
-        /**
-         * Sets the goal of the workout.
-         * @param g 
-         */
-        public void setGoal (String g)
-        {
-            goal = g;
-        }
         
         /**
          * Adds an exercise to the workout.
@@ -143,7 +90,6 @@ public class Workout {
             return listWorkout;
         }
         
-        // chrys added this
         /**
          * Splits the the list of exercises into an array of strings.
          * @param StrWorkout
