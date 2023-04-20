@@ -10,7 +10,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 /**
- * Manages the list of saved users in the external file.
+ * Creates, updates, and manages the list of saved users.
  * @author alexa
  * @see UserProfile
  * @see ProfileSaver
@@ -26,7 +26,9 @@ public class UserList {
      */
     public void read_users() {
         try {
-          File raw_Text = new File("user_profiles.txt");
+          String userHome = System.getProperty("user.home");
+            String fileName = userHome + File.separator + "user_profiles.txt";
+          File raw_Text = new File(fileName);
           Scanner profileReader = new Scanner(raw_Text);
           while (profileReader.hasNextLine()) {
             UserProfile tempUser = new UserProfile();
@@ -49,19 +51,15 @@ public class UserList {
         }
     }
     
-    /**
-     * Prints the list of users ages.
-     */
     public void printList() {
         for(int i=0;i<n;i++) {
             System.out.println(userList.get(i).getAge());
         }
     }
-    
     /**
      * Searches for a specific username out of the list and returns the index it was found, -1 if not found.
-     * @param username
-     * @return m
+     * @param username Entered username
+     * @return Index of username in list of users if found, -1 otherwise.
      */
     public int findUsername(String username) {
         int m = 0;
@@ -79,9 +77,9 @@ public class UserList {
     }
     
     /**
-     * Searches for a specific password out of the listand returns the index it was found, -1 if not found.
-     * @param password
-     * @return m
+     * Searches for a specific password out of the list and returns the index it was found, -1 if not found.
+     * @param password Entered password
+     * @return Index of username in list of users if found, -1 otherwise.
      */
     public int findPassword(String password) {
         int m = 0;
@@ -100,8 +98,8 @@ public class UserList {
     
     /**
      * Sets the active user's info to all of the info found that the specified index.
-     * @param index
-     * @return activeUser
+     * @param index Location of user in user list
+     * @return active user with associated data.
      */
     public UserProfile getActiveUser(int index) {
         UserProfile activeUser = new UserProfile();

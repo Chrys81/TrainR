@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.File;
 
 /**
- * Saves user profiles to a file.
+ * Saves user profiles to a text file in the home directory.
  */
 public class ProfileSaver {
      // Saves a UserProfile object to a file named "user_profiles.txt" in the user's home directory.
@@ -15,7 +15,7 @@ public class ProfileSaver {
     
     /**
      * Saves the profile data to a user named file in the home directory.
-     * @param userProfile 
+     * @param userProfile an object of type UserProfile that is being saved to the text file.
      */
     public void saveProfile(UserProfile userProfile) {
         String userHome = System.getProperty("user.home");
@@ -31,6 +31,7 @@ public class ProfileSaver {
     }
     /**
      * Checks if the "user_profiles.txt" file exists in the user's home directory.
+     * @return true if the file exists.
      */
     public boolean isProfileSaved() {
         String userHome = System.getProperty("user.home");

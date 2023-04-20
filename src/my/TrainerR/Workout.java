@@ -7,7 +7,7 @@ package my.TrainerR;
 import java.util.LinkedList;
 
 /**
- * Holds the different exercises and their information based on the goal.
+ * Holds the different exercises and their information in a list.
  * @author aidan
  * @see Exercise
  * @see Goal
@@ -19,8 +19,7 @@ public class Workout {
         private String goal;
         private LinkedList<Exercise> list;
         private double workoutCalories = 0;
-        
-        // chrys Added this
+
         String[] ArrayList;
         // ----------------
         

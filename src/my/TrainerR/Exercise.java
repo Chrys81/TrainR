@@ -5,10 +5,8 @@
 package my.TrainerR;
 
 /**
- * Holds the data and name for an exercise.
- * Will be expanded on and work closely with the workout class to provide custom workouts based on user goals.
+ * Class for creating exercises that stores the name and calories for an exercise.
  * @author criiz
- * @see Workout
  */
 public class Exercise {
     String name = "";
@@ -16,15 +14,15 @@ public class Exercise {
     
     /**
      * Sets the name of the exercise.
-     * @param newname 
+     * @param newname Name of the exercise.
      */
     public void setName(String newname){
         name = newname; // include reps in name
     }
     
     /**
-     * Sets how much calories the exercise burns.
-     * @param calories 
+     * Sets how many calories the exercise burns.
+     * @param calories Number of calories burned during the exercise.
      */
     public void setCals(double calories){
         exerciseCals = calories;
@@ -32,7 +30,7 @@ public class Exercise {
     
     /**
      * Returns the name of the exercise.
-     * @return name
+     * @return name of the exercise.
      */
     public String getName() {
         return name;

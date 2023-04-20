@@ -5,54 +5,53 @@
 package my.TrainerR;
 
 /**
- * Holds the goal and workout type for the user.
- * Compiles all of the exercises into the different types of workouts.
+ * A goal stores all of the workouts for access by other classes or methods.
  * @author alexa
  * @see Workout
  */
 public class Goal {
-    String listWorkout;
+    private String listWorkout;
     
-    Workout strength1 = new Workout();
-    Workout strength2 = new Workout();
-    Workout strength3 = new Workout();
-    Workout endurance1 = new Workout();
-    Workout endurance2 = new Workout();
-    Workout endurance3 = new Workout();
-    Workout loseweight1 = new Workout();
-    Workout loseweight2 = new Workout();
-    Workout loseweight3 = new Workout();
+    private Workout strength1 = new Workout();
+    private Workout strength2 = new Workout();
+    private Workout strength3 = new Workout();
+    private Workout endurance1 = new Workout();
+    private Workout endurance2 = new Workout();
+    private Workout endurance3 = new Workout();
+    private Workout loseweight1 = new Workout();
+    private Workout loseweight2 = new Workout();
+    private Workout loseweight3 = new Workout();
     
-    Exercise benchPress = new Exercise();
-    Exercise inclinePress = new Exercise();
-    Exercise tricepPulldown = new Exercise();
-    Exercise chestFly = new Exercise();
-    Exercise pushUps = new Exercise();
+    private Exercise benchPress = new Exercise();
+    private Exercise inclinePress = new Exercise();
+    private Exercise tricepPulldown = new Exercise();
+    private Exercise chestFly = new Exercise();
+    private Exercise pushUps = new Exercise();
     
-    Exercise pullups = new Exercise();
-    Exercise barbellDeadlifts = new Exercise();
-    Exercise bentBarbellRows = new Exercise();
-    Exercise rearDeltPull = new Exercise();
-    Exercise barbellCurls = new Exercise();
+    private Exercise pullups = new Exercise();
+    private Exercise barbellDeadlifts = new Exercise();
+    private Exercise bentBarbellRows = new Exercise();
+    private Exercise rearDeltPull = new Exercise();
+    private Exercise barbellCurls = new Exercise();
     
-    Exercise barbellLunges = new Exercise();
-    Exercise calfRaises = new Exercise();
-    Exercise adductor = new Exercise();
-    Exercise legCurls = new Exercise();
+    private Exercise barbellLunges = new Exercise();
+    private Exercise calfRaises = new Exercise();
+    private Exercise adductor = new Exercise();
+    private Exercise legCurls = new Exercise();
     
-    Exercise run = new Exercise();
-    Exercise jumpingJacks = new Exercise();
-    Exercise crunches = new Exercise();
+    private Exercise run = new Exercise();
+    private Exercise jumpingJacks = new Exercise();
+    private Exercise crunches = new Exercise();
     
-    Exercise swimming = new Exercise();
-    Exercise rowingMachine = new Exercise();
-    Exercise stairmaster = new Exercise();
+    private Exercise swimming = new Exercise();
+    private Exercise rowingMachine = new Exercise();
+    private Exercise stairmaster = new Exercise();
     
-    Exercise squat = new Exercise();
-    Exercise bike = new Exercise();
+    private Exercise squat = new Exercise();
+    private Exercise bike = new Exercise();
     
     /**
-     * Initializes all of the workout types with different exercises.
+     * Initializes all of the workouts with different exercises.
      */
     public void initWorkout() {
         benchPress.setName("Bench Press 3x10");
@@ -168,8 +167,9 @@ public class Goal {
     
     /**
      * Prints out all of the exercises in the workout.
-     * @param user1
-     * @return listWorkout
+     * @param user1 User the workouts are being accessed by.
+     * @return Text of all exercises in the workout based on user.
+     * @see Workout
      */
     public String printWorkout(UserProfile user1, String selectedWorkout) {
         
@@ -221,8 +221,9 @@ public class Goal {
     
     /**
      * Returns how many calories a workout burns.
-     * @param user1
-     * @return calsburned
+     * @param user1 User currently logged in.
+     * @param selectedWorkout
+     * @return Number of calories burned in a workout.
      */
     public double getWorkoutCals(UserProfile user1, String selectedWorkout) {
         double calsburned = 0;

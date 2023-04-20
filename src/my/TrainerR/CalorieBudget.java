@@ -6,20 +6,14 @@ package my.TrainerR;
 
 /**
  * Manages the calorie budget data and calculations for the user.
- * Contains methods for calculating maintenance budget, and adding calories burned from workouts.
  * @author alexa
  */
 public class CalorieBudget {
-    /*  Maintinence Calories Calculator
-        For men: 66.47 + (6.24 × weight in pounds) + (12.7 × height in inches) − (6.75 × age in years) . 
-        For women: BMR = 65.51 + (4.35 × weight in pounds) + (4.7 × height in inches) - (4.7 × age in years)
-    */
-    
     double cMaintain;
     double cBudget;
     
     /**
-     * Initiates class object with default values.
+     * Initiates CalorieBudget object with initial values of zero.
      */
     public CalorieBudget() {
         this.cMaintain = 0;
@@ -27,12 +21,12 @@ public class CalorieBudget {
     }
     
     /**
-     * Calculates the base maintenance calories for the user based on their info.
+     * Calculates the base maintenance calories for the user based on their information.
      * Serves as starting point for the calorie budget
-     * @param age
-     * @param weight
-     * @param height
-     * @param sex 
+     * @param age The age of the user. 
+     * @param weight The weight of the user.
+     * @param height The height of the user
+     * @param sex The sex of the user
      */
     public void getMaintenance(int age, int weight, int height, String sex)
     {
@@ -50,8 +44,8 @@ public class CalorieBudget {
     
     /**
      * Adds the calories of a workout to the calorie budget.
-     * @param cWorkout
-     * @return cBudget
+     * @param cWorkout Double representing the calories burned during a workout.
+     * @return A value for the new calorie budget post-workout.
      */
     public double addWorkout(double cWorkout)
     {
@@ -61,7 +55,7 @@ public class CalorieBudget {
     
     /**
      * Returns the current calorie budget.
-     * @return cBudget
+     * @return A value for the current calorie budget.
      */
     public double getBudget()
     {

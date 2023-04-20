@@ -9,8 +9,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- * Creates a user profile. 
- * Contains methods to set and get all relevant traits, as well as a method to add  it to a file for future access.
+ * Creates a user profile containing all relevant traits and adds the profile to a file for future access.
  * @author NX1
  */
 public class UserProfile {
@@ -23,7 +22,7 @@ public class UserProfile {
     private String goal;
     
     /**
-     * Initializes the profile with default info.
+     * Initializes the active user with default info.
      */
     public UserProfile() {
         this.user = "blank";
@@ -36,104 +35,104 @@ public class UserProfile {
     }
     
     /**
-     * Returns the user of the profile.
-     * @return user
+     * Returns the active user of the application.
+     * @return the active user on the application.
      */
     public String getUser() {
         return user;
     }
     
     /**
-     * Sets the user of the profile.
-     * @param user 
+     * Sets the current user of the application.
+     * @param user Sets the active user.
      */
     public void setUser(String user) {
         this.user = user;
     }
     
     /**
-     * Returns the password of the profile.
-     * @return password
+     * Returns the password of the user.
+     * @return User password
      */
     public String getPassword() {
         return password;
     }
 
     /**
-     * Sets the password of the profile.
-     * @param password 
+     * Sets the password of the user.
+     * @param password Desired password for user
      */
     public void setPassword(String password) {
         this.password = password;
     }
 
     /**
-     * Returns the age of the profile.
-     * @return age
+     * Returns the age of the user.
+     * @return age of user
      */
     public int getAge() {
         return age;
     }
 
     /**
-     * Sets the age of the profile.
-     * @param ageS 
+     * Sets the age of the user from an entered value.
+     * @param ageS Entered age of user.
      */
     public void setAge(String ageS) {
         this.age = Integer.parseInt(ageS);
     }
 
     /**
-     * Returns the height of the profile.
-     * @return height
+     * Returns the height of the user.
+     * @return height of user
      */
     public int getHeight() {
         return height;
     }
 
     /**
-     * Sets the height of the profile.
-     * @param height 
+     * Sets the height of the user.
+     * @param height Entered height of user.
      */
     public void setHeight(int height) {
         this.height = height;
     }
 
     /**
-     * Returns the weight of the profile.
-     * @return weight
+     * Returns the weight of the user.
+     * @return weight of user.
      */
     public int getWeight() {
         return weight;
     }
 
     /**
-     * Sets the weight of the profile.
-     * @param weightS 
+     * Sets the weight of the user.
+     * @param weightS Entered weight of user.
      */
     public void setWeight(String weightS) {
         this.weight = Integer.parseInt(weightS);
     }
 
     /**
-     * Returns the sex of the profile.
-     * @return sex
+     * Returns the sex of the user.
+     * @return sex of the user.
      */
     public String getSex() {
         return sex;
     }
 
     /**
-     * Sets the sex of the profile.
-     * @param sex 
+     * Sets the sex of the user.
+     * @param sex Entered sex of user.
      */
     public void setSex(String sex) {
         this.sex = sex;
     }
 
     /**
-     * Returns the goal of the profile.
-     * @return goal
+     * Returns the goal of the user.
+     * @return Selected goal of user
      */
     public String getGoal() {
         return goal;
@@ -141,7 +140,7 @@ public class UserProfile {
 
     /**
      * Sets the goal of the profile.
-     * @param goal 
+     * @param goal Goal set by user.
      */
     public void setGoal(String goal) {
         this.goal = goal;
@@ -149,7 +148,7 @@ public class UserProfile {
     
     /**
      * Sets all of the fields of the profile to specified inputs.
-     * @param user 
+     * @param user Active profile on application.
      */
     public void setTo(UserProfile user) {
         this.user = user.getUser();
