@@ -7,7 +7,7 @@ import javax.swing.ImageIcon;
 import java.awt.Image;
 
 /**
- * GUI class, containing all of the screens for the user to use the application.
+ * Primary GUI class, containing all of the screens for the user to use the application.
  * Also contains code for filling out user information.
  * @author criizzversion4:25
  */
@@ -638,6 +638,12 @@ public class TrainR_UI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * registers when the login button has been clicked, finding the user with 
+     * the matching username and password and displaying the appropriate 
+     * information to the screen on the next card.
+     * @param evt login button clicked.
+     */
     private void ButtonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoginActionPerformed
         // login button. 
         userlist.readUsers();
@@ -663,7 +669,11 @@ public class TrainR_UI extends javax.swing.JFrame {
         
         //System.out.println(g.printStrengthWorkout());
     }//GEN-LAST:event_ButtonLoginActionPerformed
-
+    
+    /**
+     * Sends the user to the new user information form
+     * @param evt New User button clicked
+     */
     private void ButtonNewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonNewUserActionPerformed
         // sends user to input new user information form
         PanelParent.removeAll();
@@ -674,6 +684,10 @@ public class TrainR_UI extends javax.swing.JFrame {
         PanelParent.validate();
     }//GEN-LAST:event_ButtonNewUserActionPerformed
 
+    /**
+     * Returns the user to the login screen.
+     * @param evt Back button clicked
+     */
     private void ButtonBackFromNewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackFromNewUserActionPerformed
         // return to login screen
         PanelParent.removeAll();
@@ -682,6 +696,11 @@ public class TrainR_UI extends javax.swing.JFrame {
         PanelParent.validate();
     }//GEN-LAST:event_ButtonBackFromNewUserActionPerformed
 
+    /**
+     * populates a UserProfile object with entered information, then moves to 
+     * the start workout screen displaying the appropriate information.
+     * @param evt Create Account button clicked.
+     */
     private void ButtonCreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCreateAccountActionPerformed
         // when create account is selected, variables are assigned based on values in text boxes
         user1.setUser(TextNewUsername.getText());
@@ -714,6 +733,10 @@ public class TrainR_UI extends javax.swing.JFrame {
         g.initWorkout();
     }//GEN-LAST:event_ButtonCreateAccountActionPerformed
 
+    /**
+     * Returns user to login screen.
+     * @param evt Back button selected.
+     */
     private void ButtonBackFromStartWorkoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackFromStartWorkoutActionPerformed
         PanelParent.removeAll();
         PanelParent.add(CardLoginPage);
@@ -722,6 +745,10 @@ public class TrainR_UI extends javax.swing.JFrame {
         g.clearWorkout();
     }//GEN-LAST:event_ButtonBackFromStartWorkoutActionPerformed
 
+    /**
+     * Returns user to start workout card from view workout card.
+     * @param evt back button selected.
+     */
     private void ButtonBackFromWorkoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackFromWorkoutActionPerformed
         PanelParent.removeAll();
         PanelParent.add(CardStartWorkout);
@@ -729,6 +756,11 @@ public class TrainR_UI extends javax.swing.JFrame {
         PanelParent.validate();
     }//GEN-LAST:event_ButtonBackFromWorkoutActionPerformed
 
+    /**
+     * Verifies if the workout was completed then adds the workout calorie count
+     * to the calorie budget for the user.
+     * @param evt Finish Workout button selected.
+     */
     private void ButtonFinishWorkoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonFinishWorkoutActionPerformed
         // if checkbox selected, add workout cals
         if(CheckBox1.isSelected()) {
@@ -747,6 +779,10 @@ public class TrainR_UI extends javax.swing.JFrame {
         PanelParent.validate();
     }//GEN-LAST:event_ButtonFinishWorkoutActionPerformed
 
+    /**
+     * Displays the workout card with the selected workout.
+     * @param evt Start Workout button selected.
+     */
     private void ButtonStartWorkoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonStartWorkoutActionPerformed
         PanelParent.removeAll();
         PanelParent.add(CardWorkout);
@@ -768,10 +804,14 @@ public class TrainR_UI extends javax.swing.JFrame {
     private void CheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CheckBox1ActionPerformed
-
+    
+    /**
+     * Displays the image corresponding to the first exercise in the workout in a new card.
+     * @param evt 
+     */
     private void ButtonShowImagesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonShowImagesActionPerformed
         
-        // diving workouts
+        // Placing exercises into an array
         WorkoutList.ArrayList = WorkoutList.ArrayWorkout(TextAreaWorkoutList.getText());
         
         // get image
@@ -794,6 +834,10 @@ public class TrainR_UI extends javax.swing.JFrame {
         LabelImageTitle.setText(WorkoutList.ArrayList[ImageCount]);
     }//GEN-LAST:event_ButtonShowImagesActionPerformed
 
+    /**
+     * Return to the workout card from viewing exercise images.
+     * @param evt 
+     */
     private void ButtonBackFromImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackFromImageActionPerformed
         PanelParent.removeAll();
         PanelParent.add(CardWorkout);
@@ -801,6 +845,10 @@ public class TrainR_UI extends javax.swing.JFrame {
         PanelParent.validate();
     }//GEN-LAST:event_ButtonBackFromImageActionPerformed
 
+    /**
+     * Changes the card to the image corresponding to the next exercise in the workout.
+     * @param evt next button clicked.
+     */
     private void ButtonNextImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonNextImageActionPerformed
 
         if (ImageCount > WorkoutList.ArrayList.length - 2){
@@ -824,6 +872,10 @@ public class TrainR_UI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_ButtonNextImageActionPerformed
 
+    /**
+     * Changes the card to the image corresponding to the previous exercise in the workout.
+     * @param evt Previous button clicked.
+     */
     private void ButtonPreviousImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPreviousImageActionPerformed
 
         if (ImageCount < 1){
@@ -847,6 +899,7 @@ public class TrainR_UI extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonPreviousImageActionPerformed
 
     /**
+     * Sets the GUI to be visible.
      * @param args the command line arguments
      */
     public static void main(String args[]) {
